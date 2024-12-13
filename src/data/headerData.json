@@ -1,0 +1,17 @@
+{
+    "paragraphHeader": "Hello, I'm",
+    "heading": "Nelson Lamounier",
+    "subHeading": [
+      "Web Developer",
+      1000,
+      "React Enthusiast ",
+      1000,
+      "Tech Explorer ",
+      1000
+    ],
+    "buttonText": "Projects",
+    "personImage": {
+      "src": "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/IMG_0014+2.jpeg",
+      "alt": "Nelson Lamounier"
+    }
+  }

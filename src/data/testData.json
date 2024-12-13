@@ -1,0 +1,59 @@
+[
+    {
+      "plan": "FREE",
+      "price": "$0",
+      "features": [
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item"
+      ],
+      "available": [true, true, false, false, false],
+      "buttonText": "Choose Plan",
+      "linkText": "Order Now"
+    },
+    {
+      "plan": "BASIC",
+      "price": "$299",
+      "features": [
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item"
+      ],
+      "available": [true, true, true, true, false],
+      "buttonText": "Choose Plan",
+      "linkText": "Order Now"
+    },
+    {
+      "plan": "STANDARD",
+      "price": "$699",
+      "features": [
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item"
+      ],
+      "available": [true, true, true, true, true],
+      "buttonText": "Choose Plan",
+      "linkText": "Order Now"
+    },
+    {
+      "plan": "PREMIUM",
+      "price": "$999",
+      "features": [
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item",
+        "Pricing Card Item"
+      ],
+      "available": [true, true, true, true, true, true],
+      "buttonText": "Choose Plan",
+      "linkText": "Order Now"
+    }
+  ]
