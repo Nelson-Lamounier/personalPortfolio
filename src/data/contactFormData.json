@@ -1,0 +1,21 @@
+{
+    "sectionHeading": "Contact",
+    "formHeading": "Get in Touch",
+    "formFields": [
+      {
+        "type": "text",
+        "placeholder": "Your Name"
+      },
+      {
+        "type": "email",
+        "placeholder": "Your Email"
+      },
+      {
+        "type": "textarea",
+        "placeholder": "Your Message"
+      }
+    ],
+    "submitButton": {
+      "value": "Send Message"
+    }
+  }

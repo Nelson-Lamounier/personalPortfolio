@@ -1,62 +1,56 @@
-
 import styled from "styled-components";
 
 interface BulletProps {
   selected: boolean;
 }
 
-export const ResumeContainer = styled.div`
+export const ResumeContainer = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   min-height: fit-content;
-  margin: 12rem 0;
-  background-color: #dfe4ea;
+  background-color: #111111;
   z-index: 10;
-  padding: 10rem;
+  padding: 0 10rem;
 `;
 
 export const ResumeContent = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-`
+  display: flex;
+  flex-direction: column;
+  margin: 10rem;
+`;
 
 export const ResumeCard = styled.div`
   display: flex;
-  height: 36rem;
-  width: 100rem
+  height: 50rem;
 `;
 
 export const ResumeBullets = styled.div`
   box-shadow: 1.5rem 0 0.9rem -15px #1f2235;
   height: 100%;
-  width: 32rem;
-  
-
+  width: 30%;
 `;
 
 export const ResumeBulletDetails = styled.div`
   flex-grow: 1;
-  width: 60rem;
+  width: 10%;
   overflow: hidden;
   padding: 0 0 0 5rem;
-  
   transition: transform 0.6s ease-out; /* Smooth scrolling */
   z-index: 10;
-
-
+  color: #d2dae2;
 `;
 
 export const ExperienceDescription = styled.div`
   margin: 1rem 0 0 0;
   text-align: justify;
   max-width: 100%;
+
 `;
 
 export const ResumeDescriptionText = styled.span`
-  font-size: 2rem;
+  font-size: 2.5rem;
 `;
 
 export const ResumeDetailsCarousal = styled.div`
@@ -70,28 +64,32 @@ export const BulletContainer = styled.div`
   width: 100%;
   position: relative;
   z-index: 10;
+  color: #d2dae2;
 `;
 
 export const Bullets = styled.div`
-  width: 86%;
+  width: 80%;
   position: relative;
   z-index: 2;
+  
 `;
 
 export const Bullet = styled.div<BulletProps>`
   display: flex;
   align-items: center;
   cursor: pointer;
-  background-color: ${({ selected }) => (selected ? "#9BEC00" : "transparent")};
-  height: 4rem;
-  margin: 1.5rem 0;
+  background-color: ${({ selected }) => (selected ? "rgba(6, 208, 1, 0.7);"  : "transparent")};
+  height: 5rem;
+  margin: 5rem 0;
   padding: 0 0.8rem;
-  border-radius: 2rem;
+  border-radius: 2%;
+  text-transform: uppercase;
   width: ${({ selected }) => (selected ? "100%" : "30px")};
   transition: width 0.1s ease;
-
   &:hover {
-    background-color: #9bec00;
+    color: rgb(6, 208, 1, 0.7);
+   
+   
   }
 `;
 
@@ -104,15 +102,14 @@ export const BulletLabel = styled.span`
 export const BulletLogo = styled.img`
   height: 3rem;
   margin: 0 3rem 0 0;
-  
+
 `;
 
 export const BulletIcons = styled.div`
-  width: 5rem;
+  width: 6rem;
   height: 100%;
   z-index: 2;
-  background-color: #9bec00;
-  
+  padding: 2rem;
   position: absolute;
   
 `;
@@ -121,9 +118,8 @@ export const ResumeScreenContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 36rem;
+  height: 50rem;
   width: 100%;
-  
 `;
 
 export const ResumeHeadingContainer = styled.div`
@@ -137,9 +133,8 @@ export const ResumeMainHeading = styled.div`
   justify-content: space-between;
 
   span {
-    color: #2f3542;
+    color: #d2dae2;
     font-size: 2rem;
-    
   }
 `;
 
@@ -148,8 +143,7 @@ export const HeadingBullet = styled.div`
   left: -3rem;
   height: 1.5rem;
   width: 1.5rem;
-  top: 5px;
-  border-radius: 50%;
+  top: 0.5rem;
 
 `;
 
@@ -157,26 +151,28 @@ export const ResumeSubHeading = styled.span`
   font-size: 2rem;
   margin: 1rem 0 0 0;
   z-index: 10;
+  color: rgb(6, 208, 1, 0.7);
 `;
 
 export const ResumeHeadingDescription = styled.p`
   font-size: 1.2rem;
   text-align: justify;
   z-index: 10;
+  
 `;
 
 export const HeadingDate = styled.span`
-  background-color: #9bec00;
+  background-color: rgb(6, 208, 1, 0.7);
   padding: 0.4rem 1.2rem;
   font-size: 1.4rem;
-  border-radius: 1.4rem;
+  border-radius: 2%;
 `;
 
 export const SkillParent = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 50%;
+
 `;
 
 export const ProgrammingSkillsContainer = styled.div`
@@ -187,12 +183,10 @@ export const ProgrammingSkillsContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-
-
 // Skill label
 export const SkillLabel = styled.span`
   font-size: 2rem;
-  color: #2f3542;
+  color: #d2dae2;
   margin-right: 1rem;
 `;
 
@@ -205,16 +199,14 @@ export const SkillPercentageContainer = styled.div`
 `;
 
 export const ActivePercentageBar = styled.div<{ percentage: number }>`
-   height: 2rem;
+  height: 2rem;
   transition: 0.8s ease;
   position: absolute;
-  background-color: #9bec00;
+  background-color: rgb(6, 208, 1, 0.7);
   width: ${(props) => props.percentage}%;
 `;
 
 export const SkillParentLabel = styled.span`
   font-size: 2rem;
-  color: #2f3542;
+  color: #d2dae2;
 `;
-
-

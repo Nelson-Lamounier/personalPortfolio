@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 // Container for Section 3
 export const ProjectContainer = styled.section`
-margin-top: 5rem
   width: 100%;
-  padding: 10rem 0;
-  background-color: #0c0a0a;
+  padding: 10rem 5rem;
+   background: radial-gradient(rgba(48, 48, 48, 0.95), rgba(0, 0, 0, 0.95));
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 10;
+
 `;
 
 // Wrapper for Projects
@@ -23,16 +23,12 @@ export const Project = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5rem;
+  margin: 0.5rem;
   background-color: #00000;
-  box-shadow: 0.3rem 0.3rem 0.1rem #06d001;
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.5s;
 
-  &:hover {
-    box-shadow: 0.3rem 0.3rem 0.3rem #06d001;
-  }
 `;
 
 // Project Text
@@ -68,6 +64,10 @@ export const ProjectTechnologies = styled.h4`
 export const ProjectImg = styled.img`
   width: 40rem;
   transition: opacity 0.3s;
+    border: 0.1em solid #9bec00;
+  background-color: ##111111;
+  padding: 3rem;
+  opacity: 0.9;
   ${Project}:hover & {
     opacity: 0.2;
   }

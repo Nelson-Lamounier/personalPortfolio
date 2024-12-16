@@ -1,0 +1,20 @@
+{
+    "contactDetails": [
+      {
+        "icon": "FaPhoneVolume",
+        "title": "Phone",
+        "items": ["+353 83 801 2629"]
+      },
+      {
+        "icon": "FaLocationDot",
+        "title": "Address",
+        "items": ["Dublin, Ireland"]
+      },
+      {
+        "icon": "FaEnvelope",
+        "title": "Email",
+        "items": ["lamounierleao@gmail.com"]
+      }
+    ]
+
+  }

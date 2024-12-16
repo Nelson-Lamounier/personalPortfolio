@@ -20,7 +20,7 @@ import {
 const AboutMe: FC = () => {
   const { description, highlights, profile } = aboutMeData;
 
-  const renderHighlight = (): JSX.Element[] => {
+  const renderHighlight = (): React.ReactNode[] => {
     return highlights.bullets.map((value, i) => (
       <Highlight key={i}>
         <span>{value}</span>
@@ -29,12 +29,12 @@ const AboutMe: FC = () => {
   };
 
   return (
-    <AboutMeContainer>
+    <AboutMeContainer id="about-me">
       <AboutMeParent>
-        <SectionHeading>About Me</SectionHeading>
-        <SectionHeadingLine></SectionHeadingLine>
+      <SectionHeading>About Me</SectionHeading>
+      <SectionHeadingLine />
         <AboutMeCard>
-          <AboutMeProfile></AboutMeProfile>
+          <AboutMeProfile/>
           <AboutMeDetails>
             <AboutMeDescriptionHeading>
               Hi there! I'm {profile.name}

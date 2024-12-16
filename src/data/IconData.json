@@ -1,0 +1,24 @@
+{
+  "iconDetails": [
+    {
+      "icon": "FaLinkedinIn",
+      "title": "LinkedIn",
+      "items": ["linkedin.com/in/nelson-lamounier-leao/"]
+    },
+    {
+      "icon": "FaGithub",
+      "title": "GitHub",
+      "items": ["github.com/Nelson-Lamounier"]
+    },
+    {
+      "icon": "FaGitlab",
+      "title": "Gitlab",
+      "items": ["gitlab.com/Nelson-Lamounier"]
+    },
+    {
+      "icon": "FaYoutube",
+      "title": "YouTube",
+      "items": ["linkedin.com/in/nelson"]
+    }
+  ]
+}

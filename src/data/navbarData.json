@@ -1,0 +1,12 @@
+{
+  "logo": {
+    "src": "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/logos/NELSON-logo+(1)/vector/default-monochrome.svg",
+    "alt": "Nelson Lamounier Logo"
+  },
+  "links": [
+    { "href": "#about-me", "label": "About" },
+    { "href": "#portfolio", "label": "Portfolio" },
+    { "href": "#resume", "label": "Resume" },
+    { "href": "#contact", "label": "Contact" }
+  ]
+}

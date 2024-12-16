@@ -1,0 +1,9 @@
+{
+    "links": [
+      { "href": "#home", "label": "Home" },
+      { "href": "#about-us", "label": "About Us" },
+      { "href": "#pricing", "label": "Pricing" },
+      { "href": "#contact", "label": "Contact" }
+    ],
+    "copyright": "Copyright © Nelson Lamounier All Rights Reserved"
+  }

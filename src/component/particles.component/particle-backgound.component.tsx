@@ -24,7 +24,7 @@ const ParticleBackground: FC<ParticleBackgroundProps> = ({ entered, className })
       "color": {
         "value": ""
       },
-      "image": "radial-gradient(ellipse at bottom, #0C0C0C 0%, #090A0F 100%)",
+      "image": "radial-gradient(ellipse at bottom, #000000 0%, #000000 100%)",
       "position": "50% 50%",
       "repeat": "no-repeat",
       "size": "cover",

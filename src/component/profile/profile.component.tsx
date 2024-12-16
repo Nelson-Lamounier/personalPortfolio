@@ -16,7 +16,6 @@ import {
   HighlightedButton,
   ProfileRoleTagline,
   ColzIcon,
-
 } from "./profile.styled";
 
 // Component
@@ -27,23 +26,37 @@ const Profile: FC = () => {
         <div>
           <Colz>
             <ColzIcon>
-            
-      <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank" rel="noopener noreferrer">
-        <i className="bi bi-facebook" ></i>
-      </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
-        <i className="bi bi-google" ></i>
-      </a>
-      <a href="https://www.instagram.com/instructor_ehizeex/" target="_blank" rel="noopener noreferrer">
-        <i className="bi bi-instagram" ></i>
-      </a>
-      <a href="https://www.youtube.com/channel/UCSSr5ZDFbilpZ592_ycoAwA" target="_blank" rel="noopener noreferrer">
-        <i className="bi bi-youtube" ></i>
-      </a>
-      <a href="https://twitter.com/Ehiedu_baba" target="_blank" rel="noopener noreferrer">
-        <i className="bi bi-twitter" ></i>
-      </a>
-  
+              <a
+                href="https://web.facebook.com/?_rdc=1&_rdr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <i className="bi bi-google"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/instructor_ehizeex/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCSSr5ZDFbilpZ592_ycoAwA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-youtube"></i>
+              </a>
+              <a
+                href="https://twitter.com/Ehiedu_baba"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-twitter"></i>
+              </a>
             </ColzIcon>
           </Colz>
           <ProfileDetailsName>
@@ -80,7 +93,7 @@ const Profile: FC = () => {
               Hire Me
             </PrimaryButton>
             <a href="ehizcv.pdf" download="Ehiedu Ehizcv.pdf">
-              <HighlightedButton >Get Resume</HighlightedButton>
+              <HighlightedButton>Get Resume</HighlightedButton>
             </a>
           </ProfileOptions>
         </div>

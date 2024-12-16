@@ -55,9 +55,9 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <ProjectContainer>
-      <SectionHeading>Projects</SectionHeading>
-      <SectionHeadingLine ></SectionHeadingLine >
+    <ProjectContainer id="portfolio">
+      <SectionHeading>Portfolio</SectionHeading>
+      <SectionHeadingLine />
       <ProjectsWrapper className="center">
         {projects.map((project, index) => (
           <Project key={index}>

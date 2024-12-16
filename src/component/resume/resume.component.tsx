@@ -111,7 +111,7 @@ const Resume: React.FC<ResumeProps> = ({ id }) => {
   const resumeBullets = [
     { label: "Education", logoSrc: educationLogo },
     { label: "Work History", logoSrc: workHistoryLogo },
-    { label: "Programming Skills", logoSrc: programmingSkillsLogo },
+    { label: "Skills", logoSrc: programmingSkillsLogo },
     { label: "Projects", logoSrc: projectsLogo },
     { label: "Interests", logoSrc: interestsLogo },
   ];
@@ -251,7 +251,7 @@ const Resume: React.FC<ResumeProps> = ({ id }) => {
   ];
 
   const handleCarousal = (index: number) => {
-    const offsetHeight = 360;
+    const offsetHeight = 500;
     setCarousalOffsetStyle({
       transform: `translateY(-${index * offsetHeight}px)`,
     });
@@ -285,7 +285,7 @@ useEffect(() => {
 }, [fadeInSubscription]);
 
   return (
-    <ResumeContainer>
+    <ResumeContainer id="resume">
       <ResumeContent>
         <SectionHeading>Resume</SectionHeading>
         <SectionHeadingLine></SectionHeadingLine>

@@ -5,10 +5,13 @@ import ParticleBackground from "../../component/particles.component/particle-bac
 import AboutMe from "../../component/about-me/about-me.component";
 import Projects from "../../component/projects/project.component";
 import Pricing from "../../component/project-test/project-test.component";
+import ContactForm from "../../component/contact-form/contact-form.component";
+import Footer from "../../component/footer/footer.component";
 
 import { HomeContainer, HeaderWrapper } from "./home.style";
 
 import Resume from "../../component/resume/resume.component";
+import ContactInfo from "../../component/contact/info/contact-info.component";
 
 // Define the props type for the component
 
@@ -24,6 +27,9 @@ const Home = () => {
       <Projects/>
 
       <Resume />
+      <ContactInfo/> 
+      <ContactForm/>
+      <Footer/>
     </HomeContainer>
   );
 };

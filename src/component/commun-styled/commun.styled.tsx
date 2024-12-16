@@ -12,7 +12,7 @@ const fadeAnimation = keyframes`
 `;
 
 export const SectionHeading = styled.h1`
-  font-family: "Oswald", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 10rem;
   font-weight: 300;
   color: #ddd;
@@ -20,7 +20,7 @@ export const SectionHeading = styled.h1`
 `;
 
 export const SectionHeadingLine = styled.div`
-  width: 35rem;
+  width: 10rem;
   height: 0.2rem;
   background-color: #16ff00;
   margin-bottom: 10rem;

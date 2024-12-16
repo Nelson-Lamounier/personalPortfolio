@@ -1,6 +1,9 @@
 import { FC } from "react";
 import headerData from "../../data/headerData.json";
 import Typical from "react-typical";
+import Typewriter from "typewriter-effect";
+
+
 
 import {
   HeadeContainer,
@@ -17,12 +20,21 @@ const Header: FC = () => {
     headerData;
 
   return (
-    <HeadeContainer id="section-1">
+    <HeadeContainer id="home">
       <Banner>
         <ParagraphHeader>{paragraphHeader}</ParagraphHeader>
         <Heading>{heading}</Heading>
+  
         <SubHeading>
-          <Typical loop={Infinity} wrapper="span" steps={subHeading} />
+        <Typewriter
+            options={{
+              strings: subHeading, // Pass an array of strings to type
+              autoStart: true,
+              loop: true, // Enable infinite looping
+              deleteSpeed: 50, // Speed at which text is deleted
+              delay: 75, // Speed at which characters are typed
+            }}
+          />
         </SubHeading>
         <BannerButton>{buttonText}</BannerButton>
       </Banner>
