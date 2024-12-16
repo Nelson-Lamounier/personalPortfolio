@@ -1,12 +1,12 @@
 import { FC } from "react";
 import headerData from "../../data/headerData.json";
-import Typical from "react-typical";
 import Typewriter from "typewriter-effect";
+import SocialLinks from "../contact/social-link/social-link.component";
 
 
 
 import {
-  HeadeContainer,
+  HeaderContainer,
   Heading,
   PersonImg,
   SubHeading,
@@ -20,7 +20,7 @@ const Header: FC = () => {
     headerData;
 
   return (
-    <HeadeContainer id="home">
+    <HeaderContainer id="home">
       <Banner>
         <ParagraphHeader>{paragraphHeader}</ParagraphHeader>
         <Heading>{heading}</Heading>
@@ -37,9 +37,11 @@ const Header: FC = () => {
           />
         </SubHeading>
         <BannerButton>{buttonText}</BannerButton>
+        
       </Banner>
+
       <PersonImg src={personImage.src} alt={personImage.alt} />
-    </HeadeContainer>
+    </HeaderContainer>
   );
 };
 

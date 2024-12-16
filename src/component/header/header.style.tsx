@@ -1,19 +1,46 @@
 import styled, { keyframes } from "styled-components";
 
-export const HeadeContainer = styled.section`
+const breakpoints = {
+  xl: "1200px",
+  lg: "800px",
+  md: "600px",
+  sm: "500px",
+  xs: "450px",
+};
+
+export const HeaderContainer = styled.section`
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  align-items: center;
+  justify-content: space-between; /* Space between the banner and the image */
+  position: relative;
   z-index: 10;
+  overflow: hidden;
+
+
+  @media (max-width: ${breakpoints.md}) {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    justify-content: center;
+  }
 `;
 
 export const Banner = styled.div`
-position: absolute;
-top: 35%;
-left: 30%;
-transform: translateX(-50%);
-z-index: 10;
-width: 70rem;
+  width: 50%; 
+  padding-left: 10%; 
+  text-align: left; 
+  z-index: 10;
 
+  @media (max-width: ${breakpoints.lg}) {
+    width: 60%; /* Adjust width for smaller screens */
+  }
+
+  @media (max-width: ${breakpoints.md}) {
+    width: 90%; /* Full width for very small screens */
+    text-align: center; /* Center text for mobile layouts */
+    padding-left: 0; /* Remove left padding */
+  }
 `;
 export const HeaderText = styled.div`
   text-align: center;
@@ -21,47 +48,70 @@ export const HeaderText = styled.div`
   letter-spacing: 0.1rem;
 `;
 
+// Main Heading
 export const Heading = styled.h1`
-  line-height: 15rem;
-  white-space: pre-wrap; /* Preserves line breaks */
+  font-size: clamp(4rem, 8vw, 12rem);
+  line-height: 1.2;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 15rem;
   font-weight: 900;
   text-transform: uppercase;
   color: #fff;
   text-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
-  width: 100%;
-  transform: translateZ(8rem);
-  letter-spacing: 0.9rem;
-  z-index: 10;
+  letter-spacing: 0.7rem;
+  margin: 0;
 
+  @media (max-width: ${breakpoints.md}) {
+    letter-spacing: 0.5rem;
+  }
 `;
 
+
+// Paragraph Header
 export const ParagraphHeader = styled.p`
-  font-size: 5rem;
+  font-size: clamp(2rem, 4vw, 5rem); /* Scales between 2rem and 5rem */
   color: #16ff00;
+  margin: 1rem 0;
+
+  @media (max-width: ${breakpoints.sm}) {
+    font-size: 3rem;
+  }
 `;
+
+// Sub Heading
 export const SubHeading = styled.h3`
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 2vw, 3rem); /* Scales between 1.5rem and 3rem */
   color: #bdc3c7;
   letter-spacing: 0.3rem;
-  width: 60rem; /* Set a fixed width */
-  z-index: 10;
+
+  max-width: 90%; /* Adjusts width dynamically */
 `;
+
 export const PersonImg = styled.img`
-  position: absolute;
   width: 40rem;
   height: 40rem;
-  top: 20%;
-  left: 60%;
   object-fit: cover;
   border-radius: 50%;
   border: 0.1em solid #9bec00;
-  background-color: ##111111;
-  padding: 3rem;
+  margin-right: 20rem;
+  padding: 5rem;
   opacity: 0.9;
   z-index: 10;
+
+  @media (max-width: ${breakpoints.xl}) {
+    width: 35rem;
+    height: 35rem;
+    margin-right: 10rem;
+  }
+
+  @media (max-width: ${breakpoints.md}) {
+    display: none; 
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    display: none; 
+  }
 `;
+
 
 // Keyframes for the fade animation
 const fadeAnimation = keyframes`
@@ -76,15 +126,15 @@ const fadeAnimation = keyframes`
 `;
 
 // Styled component for the button
+// Button for Banner
 export const BannerButton = styled.button`
   margin-top: 2rem;
-  width: 20rem;
-  height: 5rem;
+  padding: 1rem 2rem;
   background: linear-gradient(to right, #9bec00, #06d001);
   color: #fff;
-  font-size: 2rem;
-
+  font-size: clamp(1.2rem, 2vw, 2rem); /* Scales between 1.2rem and 2rem */
   border: 0.1rem solid #9bec00;
+  border-radius: 0.5rem;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
@@ -103,11 +153,13 @@ export const BannerButton = styled.button`
     left: -100%;
     transform: skewX(-30deg);
     transition: left 0.5s;
-    z-index: 10;
   }
 
   &:hover::before {
     left: 100%;
-    z-index: 10;
+  }
+
+  @media (max-width: ${breakpoints.md}) {
+    padding: 0.8rem 1.5rem;
   }
 `;

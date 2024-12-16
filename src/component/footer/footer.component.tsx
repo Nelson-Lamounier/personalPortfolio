@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <FooterNav>
       <SocialLinks/>
       </FooterNav>
-      <CopyrightText>{footerData.copyright}</CopyrightText>
+      <CopyrightText>"Copyright © Nelson Lamounier All Rights Reserved"</CopyrightText>
     </FooterContainer>
   );
 };

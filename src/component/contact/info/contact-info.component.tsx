@@ -23,14 +23,11 @@ const contactInfoDataTyped = contactInfoData as ContactInfoData;
 import {
   ContactInfoContainer,
   SectionHeading,
-  SocialIconContainer,
   InfoContainer,
   ContactWrapper,
   ProjectLink,
   ContactName,
   ContactText,
-  SocialIconLink,
-  IconContainer,
 
 } from "./contact-info.styled";
 
@@ -57,8 +54,8 @@ const ContactInfo: FC = () => {
             </InfoContainer>
           );
         })}
-      <SocialLinks/>
       </ContactWrapper>
+
     </ContactInfoContainer>
     </>
   );

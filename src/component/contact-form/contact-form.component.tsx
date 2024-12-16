@@ -1,22 +1,25 @@
 import React from "react";
 import contactData from "../../data/contactFormData.json";
-import {SectionHeading, SectionHeadingLine} from "../commun-styled/commun.styled"
+import {
+  SectionHeading,
+  SectionHeadingLine,
+} from "../commun-styled/commun.styled";
 import {
   ContactSection,
-
   ContactWrapper,
   FormHeading,
-  ContactForm
+  ContactForm,
 } from "./contact-form.styled";
 
 const Contact: React.FC = () => {
-  const { sectionHeading, formHeading, formFields, submitButton } =
-    contactData;
+  const { sectionHeading, formHeading, formFields, submitButton } = contactData;
 
   return (
-    <ContactSection>
-      <SectionHeading>{sectionHeading}</SectionHeading>
-      <SectionHeadingLine />
+    <ContactSection id="contact">
+      <div>
+        <SectionHeading>{sectionHeading}</SectionHeading>
+        <SectionHeadingLine />
+      </div>
       <ContactWrapper>
         <FormHeading>{formHeading}</FormHeading>
         <ContactForm>
@@ -24,7 +27,11 @@ const Contact: React.FC = () => {
             field.type === "textarea" ? (
               <textarea key={index} placeholder={field.placeholder}></textarea>
             ) : (
-              <input key={index} type={field.type} placeholder={field.placeholder} />
+              <input
+                key={index}
+                type={field.type}
+                placeholder={field.placeholder}
+              />
             )
           )}
           <input type="submit" value={submitButton.value} />

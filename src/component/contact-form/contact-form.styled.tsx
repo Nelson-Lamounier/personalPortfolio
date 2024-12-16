@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+const breakpoints = {
+  xl: "1200px",
+  lg: "1024px",
+  md: "768px",
+  sm: "576px",
+  xs: "480px",
+};
+
 export const ContactSection = styled.section`
   width: 100%;
   height: 100vh;
@@ -10,11 +18,7 @@ export const ContactSection = styled.section`
   z-index: 10;
 `;
 
-export const SectionHeadingLine = styled.div`
-  width: 10rem;
-  height: 0.3rem;
-  margin: 1rem auto;
-`;
+
 
 export const ContactWrapper = styled.div`
   width: 80%;
@@ -23,11 +27,20 @@ export const ContactWrapper = styled.div`
   align-items: center;
   z-index: 10;
 
+  @media (max-width: ${breakpoints.md}) {
+    width: 80%;
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    width: 90%;
+  }
+
   h1 {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     color: #ccc;
     text-transform: uppercase;
     margin-bottom: 3rem;
+    text-align: center;
   }
 `;
 
@@ -35,6 +48,11 @@ export const ContactDetails = styled.div`
   display: flex;
   margin-bottom: 8rem;
   border: 0.2rem solid #9bec00;
+
+  @media (max-width: ${breakpoints.md}) {
+    margin-bottom: 2rem;
+    border-width: 0.1rem;
+  }
 `;
 
 export const ContactItem = styled.div`
@@ -46,6 +64,10 @@ export const ContactItem = styled.div`
   i {
     font-size: 5rem;
     color: #7a1010;
+
+    @media (max-width: ${breakpoints.sm}) {
+      font-size: 2.5rem;
+    }
   }
 
   h3 {
@@ -57,6 +79,10 @@ export const ContactItem = styled.div`
   p {
     font-size: 1.6rem;
     color: #aaa;
+
+    @media (max-width: ${breakpoints.sm}) {
+      font-size: 1.2rem;
+    }
   }
 `;
 
@@ -66,7 +92,7 @@ export const FormHeading = styled.h1`
 `;
 
 export const ContactForm = styled.form`
-  width: 70rem;
+  width: 70%;
   display: flex;
   flex-direction: column;
 
@@ -81,6 +107,11 @@ export const ContactForm = styled.form`
     font-size: 1.8rem;
     font-weight: 300;
     letter-spacing: 0.1rem;
+
+        @media (max-width: ${breakpoints.sm}) {
+      font-size: 1.4rem;
+      padding: 1rem;
+    }
   }
 
   textarea {
@@ -98,7 +129,7 @@ export const ContactForm = styled.form`
     &:hover {
       background-color: rgb(6, 208, 1, 0.5);
     }
+          @media (max-width: ${breakpoints.sm}) {
+      padding: 0.8rem 1.5rem;
   }
 `;
-
-

@@ -20,7 +20,11 @@ export const AboutMeContainer = styled.section`
   z-index: 10;
   color: #ddd;
   font-family: "Montserrat", serif;
-  padding: 10rem 0;
+  padding: 5rem 2rem;
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+  }
 `;
 
 export const AboutMeParent = styled.div`
@@ -30,6 +34,11 @@ export const AboutMeParent = styled.div`
 export const AboutMeCard = styled.div`
   display: flex;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const AboutMeProfile = styled.div`
@@ -43,23 +52,62 @@ export const AboutMeProfile = styled.div`
   background-position: center;
   filter: grayscale(100%);
 
+  @media (max-width: 1024px) {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 20rem;
+    height: 20rem;
+  }
 `;
 
 export const AboutMeDetails = styled.div`
   width: 70%;
   text-align: justify;
   padding: 0 0 2rem 10rem;
+
+  @media (max-width: 1024px) {
+    padding: 0 0 2rem 3rem;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 export const AboutMeDescription = styled.p`
   font-size: 2rem;
   color: #95a5a6;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const AboutMeDescriptionHeading = styled.h2`
   margin-bottom: 1rem;
   font-size: 4rem;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const AboutMeDescriptionSubHeading = styled.h3`
@@ -67,6 +115,14 @@ export const AboutMeDescriptionSubHeading = styled.h3`
   font-size: 2.5rem;
   color: #16ff00;
   font-weight: 100;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const AboutMeHighlights = styled.div`
@@ -76,6 +132,14 @@ export const AboutMeHighlights = styled.div`
 export const HighlightHeading = styled.h4`
   color: #16ff00;
   font-size: 2rem;
+
+    @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const Highlight = styled.div`
@@ -86,6 +150,14 @@ export const Highlight = styled.div`
   margin-bottom: 1rem;
   color: #95a5a6;
   padding: 0.5rem 0;
+
+    @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const SectionHeading = styled.h1`
@@ -94,6 +166,15 @@ export const SectionHeading = styled.h1`
   font-weight: 300;
   color: #ddd;
   margin-right: 4rem;
+
+    @media (max-width: 768px) {
+    font-size: 6rem;
+    margin-right: 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 4rem;
+  }
 `;
 
 export const SectionHeadingLine = styled.div`
@@ -136,9 +217,25 @@ export const BannerButton = styled.button`
     left: 100%;
     z-index: 10;
   }
+
+    @media (max-width: 768px) {
+    width: 18rem;
+    height: 3.5rem;
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
 `;
 
 export const AboutMeOptions = styled.div`
   display: flex;
   flex-direction: column;
+
+    @media (max-width: 768px) {
+    align-items: center;
+  }
 `;

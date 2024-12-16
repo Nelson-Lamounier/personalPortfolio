@@ -1,5 +1,13 @@
 import styled, { keyframes } from "styled-components";
 
+const breakpoints = {
+  xl: "1200px",
+  lg: "1024px",
+  md: "768px",
+  sm: "480px",
+};
+
+// Keyframes for fade-in animation
 const fadeAnimation = keyframes`
   0% {
     opacity: 0;
@@ -11,27 +19,50 @@ const fadeAnimation = keyframes`
   }
 `;
 
+// Section Heading
 export const SectionHeading = styled.h1`
   font-family: "Bebas Neue", sans-serif;
   font-size: 10rem;
   font-weight: 300;
   color: #ddd;
   margin-right: 4rem;
+
+    @media (max-width: 768px) {
+    font-size: 6rem;
+    margin-right: 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 4rem;
+  }
 `;
 
+
+// Section Heading Line
 export const SectionHeadingLine = styled.div`
   width: 10rem;
   height: 0.2rem;
   background-color: #16ff00;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
+
+  @media (max-width: ${breakpoints.md}) {
+    width: 8rem;
+    margin-bottom: 8rem;
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    width: 6rem;
+    margin-bottom: 6rem;
+  }
 `;
 
+// Banner Button
 export const BannerButton = styled.button`
-  width: 20rem;
-  height: 4rem;
+  width: clamp(15rem, 20%, 20rem); /* Dynamically scale the width */
+  height: clamp(3rem, 5%, 4rem); /* Dynamically scale the height */
   background: linear-gradient(to right, #9bec00, #06d001);
   color: #fff;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem); /* Scales font size dynamically */
   border-radius: 3rem;
   border: 0.1rem solid #9bec00;
   cursor: pointer;
@@ -58,5 +89,17 @@ export const BannerButton = styled.button`
   &:hover::before {
     left: 100%;
     z-index: 10;
+  }
+
+  @media (max-width: ${breakpoints.md}) {
+    width: 18rem;
+    height: 3.5rem;
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.4rem;
   }
 `;

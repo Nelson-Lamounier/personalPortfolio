@@ -1,0 +1,67 @@
+{
+    "bullets": [
+      { "label": "Education", "icon": "FaGraduationCap" },
+      { "label": "Work History", "icon": "FaBriefcase" },
+      { "label": "Skills", "icon": "FaCode" },
+      { "label": "Projects", "icon": "FaTasks" },
+      { "label": "Language", "icon": "FaMusic" }
+    ],
+    "education": [
+      {
+        "heading": "University of Legon Accra, Ghana",
+        "subHeading": "BACHELOR OF SCIENCE INFORMATION TECHNOLOGY",
+        "fromDate": "2014",
+        "toDate": "2018"
+      },
+      {
+        "heading": "National Youth Service Corps",
+        "subHeading": "Ministry Of Science And Technology. Uyo Akwa Ibom State",
+        "fromDate": "2019",
+        "toDate": "2020"
+      },
+      {
+        "heading": "High School",
+        "subHeading": "Command Secondary School Mbiri",
+        "fromDate": "2007",
+        "toDate": "2012"
+      }
+    ],
+    "workHistory": [
+      {
+        "heading": "Ehizeex Technology",
+        "subHeading": "FULL STACK DEVELOPER INTERN",
+        "fromDate": "2021",
+        "toDate": "Present",
+        "descriptions": [
+          "Developed an ecommerce website with a dashboard for managing products, reviews, users, and payments.",
+          "Integrated the web app with backend services for user onboarding with dynamic forms.",
+          "Designed and implemented UI based on provided designs."
+        ]
+      }
+    ],
+    "skills": [
+      { "skill": "JavaScript", "ratingPercentage": 85 },
+      { "skill": "React JS", "ratingPercentage": 85 },
+      { "skill": "Express JS", "ratingPercentage": 89 },
+      { "skill": "Node JS", "ratingPercentage": 89 },
+      { "skill": "Mongo DB", "ratingPercentage": 70 }
+    ],
+    "projects": [
+      {
+        "title": "Personal Portfolio Website",
+        "duration": { "fromDate": "2020", "toDate": "2021" },
+        "description": "A personal portfolio to showcase my projects and details.",
+        "subHeading": "Technologies Used: React JS, Bootstrap"
+      }
+    ],
+    "interests": [
+      {
+        "heading": "Teaching",
+        "description": "I enjoy teaching and sharing knowledge as I believe in learning through collaboration."
+      },
+      {
+        "heading": "Music",
+        "description": "Listening to music helps me unwind and keeps me focused."
+      }
+    ]
+  }

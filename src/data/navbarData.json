@@ -4,6 +4,7 @@
     "alt": "Nelson Lamounier Logo"
   },
   "links": [
+    { "href": "#home", "label": "Home" },
     { "href": "#about-me", "label": "About" },
     { "href": "#portfolio", "label": "Portfolio" },
     { "href": "#resume", "label": "Resume" },

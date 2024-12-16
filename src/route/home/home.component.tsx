@@ -27,8 +27,8 @@ const Home = () => {
       <Projects/>
 
       <Resume />
-      <ContactInfo/> 
       <ContactForm/>
+      <ContactInfo/> 
       <Footer/>
     </HomeContainer>
   );
