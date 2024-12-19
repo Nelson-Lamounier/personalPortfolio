@@ -1,16 +1,13 @@
 import { FC } from "react";
 import headerData from "../../data/headerData.json";
 import Typewriter from "typewriter-effect";
-import SocialLinks from "../contact/social-link/social-link.component";
-
-
+import { HeroButton } from "../commun-styled/commun.styled";
 
 import {
   HeaderContainer,
   Heading,
   PersonImg,
   SubHeading,
-  BannerButton,
   ParagraphHeader,
   Banner,
 } from "./header.style";
@@ -24,9 +21,8 @@ const Header: FC = () => {
       <Banner>
         <ParagraphHeader>{paragraphHeader}</ParagraphHeader>
         <Heading>{heading}</Heading>
-  
         <SubHeading>
-        <Typewriter
+          <Typewriter
             options={{
               strings: subHeading, // Pass an array of strings to type
               autoStart: true,
@@ -36,8 +32,7 @@ const Header: FC = () => {
             }}
           />
         </SubHeading>
-        <BannerButton>{buttonText}</BannerButton>
-        
+        <HeroButton>{buttonText}</HeroButton>
       </Banner>
 
       <PersonImg src={personImage.src} alt={personImage.alt} />

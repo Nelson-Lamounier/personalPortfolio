@@ -50,6 +50,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&family=Unlock&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
 :export {
   accentColor: rgb(188, 255, 0);
@@ -65,13 +67,14 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  font-family:  "Montserrat", serif;
+  font-family:  "Kanit", serif;
   font-weight: 400;
 }
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  line-height: 1.5;
 }
 
 .center {
@@ -90,6 +93,32 @@ html {
   html {
     font-size: 45%;
   } }
+
+
+  :root {
+    --font-primary: "Russo One", serif;
+    --font-secondary: "Kanit", serif;
+    --font-size-h1: 10rem;
+    --font-size-h2: 7.5rem;
+    --font-size-h3: 5.625rem;
+    --font-weight-light: 100;
+    --font-weight-medium: 100;
+    --font-weight-bold: 700;
+    --background-gradient-start: rgba(48, 48, 48, 0.95);
+    --background-gradient-end: rgba(3, 3, 3, 1);
+    --background-primary-opacity: rgba(17, 17, 17, 1);
+    --background-secondary-opacity: rgba(67, 67, 67, 0.4);
+    --background-primary: rgb(17, 17, 17);
+    --background-secondary: rgb(67, 67, 67);
+    --light: rgb(231, 231, 231);
+    --light-gray: rgb(184, 184, 184);
+    --dark-gray: rgb(41, 41, 41);
+    --accent: rgb(6, 208, 1);
+    --accent-light: rgb(155, 236, 0);
+    --button-primary: rgba(6, 208, 1, 0.9);
+    --button-secondary: rgba(6, 208, 1, 0.5);
+
+  } 
 
 
 /* code {

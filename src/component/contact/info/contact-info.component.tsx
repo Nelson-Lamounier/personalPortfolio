@@ -2,7 +2,6 @@
 import {FC} from "react"
 import contactInfoData from "../../../data/contactInfoData.json" with { type: "json" };
 
-import SocialLinks from "../social-link/social-link.component";
 
 import * as Icons from "react-icons/fa6";
 
@@ -36,7 +35,7 @@ const ContactInfo: FC = () => {
 
   return (
     <>
-    <ContactInfoContainer id="contact" >
+    <ContactInfoContainer>
       <SectionHeading>Contact Info</SectionHeading>
       <ContactWrapper className="center">
         {contactDetails.map((info, index) => {

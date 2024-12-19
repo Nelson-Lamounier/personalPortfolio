@@ -1,0 +1,164 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "projectName": "Magic Rainbow/ Website",
+      "projectOverview": "Developed a comprehensive full-stack web application for a client to enhance their online presence and digital marketing capabilities. ",
+      "keyTechnicalAchievements": {
+        "frontend": [
+          "Engaging home page",
+          "Comprehensive 'About Us' section",
+          "Fully functional project gallery",
+          "Testimonial showcase",
+          "Client logo display"
+        ],
+        "technicalImplementationHighlights": [
+          "Created a custom video player component to showcase client's portfolio",
+          "Integrated AWS Lambda functions to develop a seamless 'Request a Quote' form",
+          "Implemented secure API calls to enhance user interaction and data collection",
+          "Utilized MongoDB to develop a dynamic image gallery with backend database integration",
+          "Deployed the website on AWS, configuring domain settings and implementing SSL security protocols"
+        ]
+      },
+      "skillsDemonstrated": [
+        "Frontend development with React",
+        "Cloud service integration (AWS)",
+        "Database management (MongoDB)",
+        "API development",
+        "User experience (UX) design",
+        "Digital marketing principles"
+      ],
+      "projectOutcome": "Successfully delivered a professional, fully functional website that improved the client's online visibility and provided an intuitive user experience. The project showcased the ability to combine technical expertise with strategic digital marketing approaches.",
+      "technologiesUsed": [
+        "React",
+        "AWS (Lambda, Hosting)",
+        "MongoDB",
+        "SSL Security",
+        "API Integration"
+      ],
+      "Link": "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/potfolio-videos/MagicRainbow.mp4",
+      "Demo": "www.link.com",
+      "Repository": "gitlab.com"
+    },
+    {
+      "id": 2,
+      "projectName": "Art Wal Website",
+      "projectOverview": "Developed a comprehensive full-stack web application for a client to enhance their online presence and digital marketing capabilities. The project involved creating a responsive, feature-rich website using modern web technologies and cloud services.",
+      "keyTechnicalAchievements": {
+        "frontend": [
+          "Engaging home page",
+          "Comprehensive 'About Us' section",
+          "Fully functional project gallery",
+          "Testimonial showcase",
+          "Client logo display"
+        ],
+        "technicalImplementationHighlights": [
+          "Created a custom video player component to showcase client's portfolio",
+          "Integrated AWS Lambda functions to develop a seamless 'Request a Quote' form",
+          "Implemented secure API calls to enhance user interaction and data collection",
+          "Utilized MongoDB to develop a dynamic image gallery with backend database integration",
+          "Deployed the website on AWS, configuring domain settings and implementing SSL security protocols"
+        ]
+      },
+      "skillsDemonstrated": [
+        "Frontend development with React",
+        "Cloud service integration (AWS)",
+        "Database management (MongoDB)",
+        "API development",
+        "User experience (UX) design",
+        "Digital marketing principles"
+      ],
+      "projectOutcome": "Successfully delivered a professional, fully functional website that improved the client's online visibility and provided an intuitive user experience. The project showcased the ability to combine technical expertise with strategic digital marketing approaches.",
+      "technologiesUsed": [
+        "React",
+        "AWS (Lambda, Hosting)",
+        "MongoDB",
+        "SSL Security",
+        "API Integration"
+      ],
+      "Link": "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/potfolio-videos/verticalPrinting.mp4",
+      "Demo": "www.link.com",
+      "Repository": "gitlab.com"
+    },
+    {
+      "id": 3,
+      "projectName": "Ecommerce Website",
+      "projectOverview": "Developed a comprehensive full-stack web application for a client to enhance their online presence and digital marketing capabilities. The project involved creating a responsive, feature-rich website using modern web technologies and cloud services.",
+      "keyTechnicalAchievements": {
+        "frontend": [
+          "Engaging home page",
+          "Comprehensive 'About Us' section",
+          "Fully functional project gallery",
+          "Testimonial showcase",
+          "Client logo display"
+        ],
+        "technicalImplementationHighlights": [
+          "Created a custom video player component to showcase client's portfolio",
+          "Integrated AWS Lambda functions to develop a seamless 'Request a Quote' form",
+          "Implemented secure API calls to enhance user interaction and data collection",
+          "Utilized MongoDB to develop a dynamic image gallery with backend database integration",
+          "Deployed the website on AWS, configuring domain settings and implementing SSL security protocols"
+        ]
+      },
+      "skillsDemonstrated": [
+        "Frontend development with React",
+        "Cloud service integration (AWS)",
+        "Database management (MongoDB)",
+        "API development",
+        "User experience (UX) design",
+        "Digital marketing principles"
+      ],
+      "projectOutcome": "Successfully delivered a professional, fully functional website that improved the client's online visibility and provided an intuitive user experience. The project showcased the ability to combine technical expertise with strategic digital marketing approaches.",
+      "technologiesUsed": [
+        "React",
+        "AWS (Lambda, Hosting)",
+        "MongoDB",
+        "SSL Security",
+        "API Integration"
+      ],
+      "Link": "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/potfolio-videos/udemyProject.mp4",
+      "Demo": "www.link.com",
+      "Repository": "gitlab.com"
+    },
+    {
+      "id": 4,
+      "projectName": "gymBS Ecommerce/ Website",
+      "projectOverview": "Developed a comprehensive full-stack web application for a client to enhance their online presence and digital marketing capabilities. The project involved creating a responsive, feature-rich website using modern web technologies and cloud services.",
+      "keyTechnicalAchievements": {
+        "frontend": [
+          "Engaging home page",
+          "Comprehensive 'About Us' section",
+          "Fully functional project gallery",
+          "Testimonial showcase",
+          "Client logo display"
+        ],
+        "technicalImplementationHighlights": [
+          "Created a custom video player component to showcase client's portfolio",
+          "Integrated AWS Lambda functions to develop a seamless 'Request a Quote' form",
+          "Implemented secure API calls to enhance user interaction and data collection",
+          "Utilized MongoDB to develop a dynamic image gallery with backend database integration",
+          "Deployed the website on AWS, configuring domain settings and implementing SSL security protocols"
+        ]
+      },
+      "skillsDemonstrated": [
+        "Frontend development with React",
+        "Cloud service integration (AWS)",
+        "Database management (MongoDB)",
+        "API development",
+        "User experience (UX) design",
+        "Digital marketing principles"
+      ],
+      "projectOutcome": "Successfully delivered a professional, fully functional website that improved the client's online visibility and provided an intuitive user experience. The project showcased the ability to combine technical expertise with strategic digital marketing approaches.",
+      "technologiesUsed": [
+        "React",
+        "AWS (Lambda, Hosting)",
+        "MongoDB",
+        "SSL Security",
+        "API Integration"
+      ],
+      "Link": "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/potfolio-videos/gymBS-Ecommerce.mp4",
+      "Demo": "www.link.com",
+      "Repository": "gitlab.com"
+    }
+  ]
+}

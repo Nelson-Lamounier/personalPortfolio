@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation, Link } from "react-router-dom";
 import { NavbarContainer, Logo, NavList, NavBar,  MobileMenuIcon, 
   MobileNavMenu  } from "./navbar.styled";
 
@@ -11,7 +12,11 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
+  const location = useLocation(); // Get current route
   const { logo, links } = navbarData;
+
+    // Check if the user is on the project page
+    const isProjectPage = location.pathname.startsWith("/project/");
 
   useEffect(() => {
     const onScroll = () => {
@@ -59,55 +64,77 @@ const Navbar: React.FC = () => {
     };
   
 
-  return (
-    <NavbarContainer>
-      <NavBar
-        className={`navbar ${
-          isScrolled ? "navbar-colored" : "navbar-transparent"
-        }`}
-      >
-        <Logo>
-          <a href="#">
-            <img src={logo.src} alt={logo.alt} />
-          </a>
-        </Logo>
-        <NavList>
-          {links.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              className={`nav-link ${
-                activeSection === link.href.slice(1) ? "active" : ""
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
-        </NavList>
-        <MobileMenuIcon onClick={toggleMenu}>
-          {isMenuOpen ? (
-            <i className="fas fa-times"></i> // Close icon
-          ) : (
-            <i className="fas fa-bars"></i> // Hamburger icon
-          )}
-        </MobileMenuIcon>
-      </NavBar>
-      <MobileNavMenu isOpen={isMenuOpen}>
-        {links.map((link, index) => (
-          <a
-            key={index}
-            href={link.href}
-            className={`nav-link ${
-              activeSection === link.href.slice(1) ? "active" : ""
+    return (
+      <NavbarContainer>
+        {/* Conditionally Render Navbar */}
+        {isProjectPage ? (
+          <NavBar className="navbar navbar-colored">
+            {/* Minimal Navbar for Project Page */}
+            <Logo>
+              <Link to="/">
+                <img src={logo.src} alt={logo.alt} />
+              </Link>
+            </Logo>
+            <NavList>
+              <Link to="/" className="nav-link">
+                ← Back to Home
+              </Link>
+            </NavList>
+          </NavBar>
+        ) : (
+          <NavBar
+            className={`navbar ${
+              isScrolled ? "navbar-colored" : "navbar-transparent"
             }`}
-            onClick={() => setIsMenuOpen(false)} // Close menu when a link is clicked
           >
-            {link.label}
-          </a>
-        ))}
-      </MobileNavMenu>
-    </NavbarContainer>
-  );
-};
-
-export default Navbar;
+            {/* Full Navbar for Other Pages */}
+            <Logo>
+              <a href="#">
+                <img src={logo.src} alt={logo.alt} />
+              </a>
+            </Logo>
+            <NavList>
+              {links.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  className={`nav-link ${
+                    activeSection === link.href.slice(1) ? "active" : ""
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </NavList>
+            <MobileMenuIcon onClick={toggleMenu}>
+              {isMenuOpen ? (
+                <i className="fas fa-times"></i>
+              ) : (
+                <i className="fas fa-bars"></i>
+              )}
+            </MobileMenuIcon>
+          </NavBar>
+        )}
+  
+        {/* Mobile Navigation Menu */}
+        {!isProjectPage && (
+          <MobileNavMenu isOpen={isMenuOpen}>
+            {links.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                className={`nav-link ${
+                  activeSection === link.href.slice(1) ? "active" : ""
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+          </MobileNavMenu>
+        )}
+      </NavbarContainer>
+    );
+  };
+  
+  export default Navbar;

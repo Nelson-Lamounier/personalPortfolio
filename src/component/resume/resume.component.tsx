@@ -1,7 +1,6 @@
-import React, { useState, useEffect, FC, CSSProperties } from "react";
+import React, { useState, CSSProperties } from "react";
 import resumeData from "../../data/resumeData.json"
-import ScrollService from "../util/scroll";
-import Animations from "../util/animation";
+
 import { FaGraduationCap, FaBriefcase, FaCode, FaTasks, FaMusic } from "react-icons/fa";
 
 import {
@@ -18,11 +17,9 @@ import {
   BulletContainer,
   Bullet,
   BulletLabel,
-  BulletLogo,
   ResumeScreenContainer,
   ResumeHeadingContainer,
   ResumeMainHeading,
-  HeadingBullet,
   ResumeSubHeading,
   ResumeHeadingDescription,
   HeadingDate,
@@ -35,6 +32,7 @@ import {
   SkillLabel,
   SkillPercentageContainer,
   ResumeDetailsCarousal,
+  StyleContainer,
 } from "./resume.style";
 
 const iconMapping = {
@@ -145,6 +143,7 @@ const Resume: React.FC = () => {
   };
 
   return (
+    <>
     <ResumeContainer id="resume">
       <ResumeContent>
         <SectionHeading>Resume</SectionHeading>
@@ -160,6 +159,8 @@ const Resume: React.FC = () => {
         </ResumeCard>
       </ResumeContent>
     </ResumeContainer>
+    <StyleContainer/>
+    </>
   );
 };
 

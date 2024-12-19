@@ -2,52 +2,35 @@ import { FC } from "react";
 import aboutMeData from "../../data/aboutMeData.json";
 
 import {
+  HeroButton,
+  SectionHeading,
+  SectionHeadingLine,
+} from "../commun-styled/commun.styled";
+
+import {
   AboutMeContainer,
-  AboutMeParent,
   AboutMeCard,
   AboutMeDetails,
   AboutMeDescription,
-  AboutMeDescriptionHeading,
   AboutMeDescriptionSubHeading,
-  AboutMeHighlights,
-  Highlight,
-  SectionHeadingLine,
-  BannerButton,
-  AboutMeProfile,
-  SectionHeading,
 } from "./about-me.style";
 
 const AboutMe: FC = () => {
-  const { description, highlights, profile } = aboutMeData;
-
-  const renderHighlight = (): React.ReactNode[] => {
-    return highlights.bullets.map((value, i) => (
-      <Highlight key={i}>
-        <span>{value}</span>
-      </Highlight>
-    ));
-  };
+  const { description, profile } = aboutMeData;
 
   return (
     <AboutMeContainer id="about-me">
-      <AboutMeParent>
       <SectionHeading>About Me</SectionHeading>
       <SectionHeadingLine />
-        <AboutMeCard>
-          <AboutMeProfile/>
-          <AboutMeDetails>
-            <AboutMeDescriptionHeading>
-              Hi there! I'm {profile.name}
-            </AboutMeDescriptionHeading>
-            <AboutMeDescriptionSubHeading>
-              {profile.role}
-            </AboutMeDescriptionSubHeading>
-            <AboutMeDescription>{description}</AboutMeDescription>
-            <AboutMeHighlights>{renderHighlight()}</AboutMeHighlights>
-            <BannerButton>{profile.buttonText}</BannerButton>
-          </AboutMeDetails>
-        </AboutMeCard>
-      </AboutMeParent>
+      <AboutMeCard>
+        <AboutMeDetails>
+          <AboutMeDescriptionSubHeading>
+            {profile.role}
+          </AboutMeDescriptionSubHeading>
+          <AboutMeDescription>{description}</AboutMeDescription>
+          <HeroButton>{profile.buttonText}</HeroButton>
+        </AboutMeDetails>
+      </AboutMeCard>
     </AboutMeContainer>
   );
 };

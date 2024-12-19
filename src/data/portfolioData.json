@@ -1,0 +1,33 @@
+{
+  "projects": [
+    {
+
+      "name": "Frontend Developer",
+      "technologies": "HTML / CSS / JS",
+      "image": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/portfolio-hero-images/portfolio-1.png",
+      "to": "/project/1"
+
+    },
+    {
+
+      "name": "Frontend Developer",
+      "technologies": "React / Firebase",
+      "image": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/portfolio-hero-images/portfolio-02.png",
+      "to": "/project/2"
+    },
+    {
+
+      "name": "Full Stack Development",
+      "technologies": "React / NodeJs / Typescript",
+      "image": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/portfolio-hero-images/portfolio-02.png",
+      "to": "/project/3"
+    },
+    {
+ 
+      "name": "Full Stack Development",
+      "technologies": "React / NodeJs / Typescript",
+      "image": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/portfolio-hero-images/portfolio-02.png",
+      "to": "/project/4"
+    }
+  ]
+}

@@ -1,10 +1,45 @@
 import styled, { keyframes } from "styled-components";
 
-const breakpoints = {
-  xl: "1200px",
-  lg: "1024px",
-  md: "768px",
-  sm: "480px",
+export const breakpoints = {
+  xl: "120rem",   
+  lg: "102.4rem", 
+  md: "76.8rem",  
+  sm: "48rem",    
+};
+
+export const theme = {
+  colors: {
+    backgroundPrimaryOpacity: "var(--background-primary-opacity)",
+    backgroundSecondaryOpacity: "var(--background-secondary-opacity)",
+    gradientStart: "var(--background-gradient-start)",
+    gradientEnd: "var(--background-gradient-end)",
+    backgroundPrimary: "var(--background-primary)",
+    backgroundSecondary: "var(--background-secondary)",
+    light: "var(--light)",
+    lightGray: "var(--light-gray)",
+    darkGray: "var(--dark-gray)",
+    accent: "var(--accent)",
+    accentLight: "var(--accent-light)",
+    buttonPrimary: "var(--button-primary)",
+    buttonSecundary: "var(--button-secondary)"
+  },
+};
+
+export const fonts = {
+  family: {
+    primary: "var(--font-primary)",
+    secondary: "var(--font-secondary)",
+  },
+  sizes: {
+    h1: "var(--font-size-h1)",
+    h2: "var(--font-size-h2)",
+    h3: "var(--font-size-h3)",
+
+  },
+  weights: {
+    light:"var(--font-weight-light)",
+    bold: "var(--font-weight-bold)",
+  },
 };
 
 // Keyframes for fade-in animation
@@ -21,10 +56,11 @@ const fadeAnimation = keyframes`
 
 // Section Heading
 export const SectionHeading = styled.h1`
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 10rem;
-  font-weight: 300;
-  color: #ddd;
+  font-family ${fonts.family.primary};
+  font-size: ${fonts.sizes.h2};
+  text-transform: uppercase;
+  font-weight: 700;
+  color: ${({theme}) => theme.colors.light};
   margin-right: 4rem;
 
     @media (max-width: 768px) {
@@ -101,5 +137,25 @@ export const BannerButton = styled.button`
     width: 15rem;
     height: 3rem;
     font-size: 1.4rem;
+  }
+`;
+
+export const HeroButton = styled.button`
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+  color: ${({ theme }) => theme.colors.buttonPrimary}; 
+  border: 0.1rem solid ${({ theme }) => theme.colors.buttonPrimary};
+  border-radius: 2.5rem;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.buttonSecundary}; 
+    border: 0.1rem solid ${({ theme }) => theme.colors.buttonSecundary};
+  }
+
+  @media (max-width: ${breakpoints.md}) {
+    padding: 0.8rem 1.5rem;
   }
 `;

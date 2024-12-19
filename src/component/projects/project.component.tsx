@@ -1,5 +1,7 @@
 import React from "react";
 
+import portfolioData from "../../data/portfolioData.json"
+
 
 import {
   ProjectContainer,
@@ -10,6 +12,7 @@ import {
   ProjectTechnologies,
   ProjectImg,
   ProjectLink,
+  StyleContainer,
 } from "./project.style";
 import { SectionHeading, SectionHeadingLine } from "../commun-styled/commun.styled";
 
@@ -22,39 +25,13 @@ interface Project {
 }
 
 const Projects: React.FC = () => {
-  const projects: Project[] = [
-    {
-      name: "Architect Website",
-      technologies: "HTML / CSS / JS",
-      image:
-        "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/projectsImages/project-hero-1.png",
-      videoLink: "https://www.youtube.com/watch?v=3J-EFMzz94g",
-    },
-    {
-      name: "Budget App",
-      technologies: "ReactJS",
-      image:
-        "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/projectsImages/project-hero-02.png",
-      videoLink: "https://www.youtube.com/watch?v=fDffQYs2WB0",
-    },
-    {
-      name: "Wine House",
-      technologies: "HTML / CSS / JS",
-      image:
-        "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/projectsImages/project-hero-1.png",
-      videoLink: "https://www.youtube.com/watch?v=jtmuopTpzGE",
-    },
-    {
-      name: "Task Manager",
-      technologies: "ReactJS",
-      image:
-        "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/projectsImages/project-hero-1.png",
-      videoLink: "https://www.youtube.com/watch?v=fqup-BL3VjI",
-    },
 
-  ];
+  const {projects} = portfolioData;
+
+
 
   return (
+    <>
     <ProjectContainer id="portfolio">
       <SectionHeading>Portfolio</SectionHeading>
       <SectionHeadingLine />
@@ -67,16 +44,16 @@ const Projects: React.FC = () => {
             </ProjectText>
             <ProjectImg src={project.image} alt={`${project.name} preview`} />
             <ProjectLink
-              href={project.videoLink || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
+              to={project.to}
             >
-              Go to Video
+              Go to Video →
             </ProjectLink>
           </Project>
         ))}
       </ProjectsWrapper>
     </ProjectContainer>
+    <StyleContainer/>
+    </>
   );
 };
 

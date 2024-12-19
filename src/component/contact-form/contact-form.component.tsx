@@ -9,12 +9,14 @@ import {
   ContactWrapper,
   FormHeading,
   ContactForm,
+
 } from "./contact-form.styled";
 
 const Contact: React.FC = () => {
   const { sectionHeading, formHeading, formFields, submitButton } = contactData;
 
   return (
+    <>
     <ContactSection id="contact">
       <div>
         <SectionHeading>{sectionHeading}</SectionHeading>
@@ -38,6 +40,8 @@ const Contact: React.FC = () => {
         </ContactForm>
       </ContactWrapper>
     </ContactSection>
+    
+    </>
   );
 };
 
