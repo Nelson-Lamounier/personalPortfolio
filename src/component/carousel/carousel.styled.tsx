@@ -3,7 +3,11 @@ import styled from "styled-components";
 // Section container
 export const OtherProjectsContainer = styled.section`
   width: 100%;
-   background: linear-gradient(-180deg, #111111, #434343);
+  background: linear-gradient(
+    180deg,
+    ${({ theme }) => theme.colors.backgroundPrimaryOpacity},
+    ${({ theme }) => theme.colors.backgroundSecondaryOpacity}
+  );
   text-align: center;
   padding: 5rem 0;
 `;
@@ -28,13 +32,10 @@ export const SwiperContainer = styled.div`
   margin: auto;
 `;
 
-
-
 // Front side of pricing card
 export const CardFront = styled.div`
   text-align: center;
-  padding: 10rem;
-  
+  padding: 2rem;
 `;
 
 // Pricing card heading
@@ -42,19 +43,15 @@ export const CardHeading = styled.h3`
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-   color: #16ff00;
-   font-weight:100;
+  color: #16ff00;
+  font-weight: 100;
 `;
-
 
 export const SubHeadingCard = styled.p`
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #95a5a6;
 `;
-
-
-
 
 // Pricing card button
 export const PricingCardButton = styled.button`
@@ -75,7 +72,7 @@ export const PricingCardButton = styled.button`
 // Back side of pricing card
 export const PricingCardBack = styled.div`
   text-align: center;
-  padding: 2rem;
+
   background-color: #16ff00;
   color: #fff;
   border-radius: 0.5rem;
@@ -83,10 +80,11 @@ export const PricingCardBack = styled.div`
 
 // Image styling
 export const StyledImage = styled.img`
-  width: 60rem;
+  width: 40rem;
+  height: 50rem;
   transition: opacity 0.3s;
   border: 0.1em solid #9bec00;
-  background-color: #111111;
+
   padding: 3rem;
   opacity: 0.9;
 

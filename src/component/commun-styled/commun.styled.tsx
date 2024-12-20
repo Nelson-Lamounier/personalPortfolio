@@ -13,6 +13,8 @@ export const theme = {
     backgroundSecondaryOpacity: "var(--background-secondary-opacity)",
     gradientStart: "var(--background-gradient-start)",
     gradientEnd: "var(--background-gradient-end)",
+    textGradientStart: "var(--text-gradient-start)",
+    textGradientEnd: "var(--text-gradient-end)",
     backgroundPrimary: "var(--background-primary)",
     backgroundSecondary: "var(--background-secondary)",
     light: "var(--light)",
@@ -94,8 +96,8 @@ export const SectionHeadingLine = styled.div`
 
 // Banner Button
 export const BannerButton = styled.button`
-  width: clamp(15rem, 20%, 20rem); /* Dynamically scale the width */
-  height: clamp(3rem, 5%, 4rem); /* Dynamically scale the height */
+  width: clamp(15rem, 20%, 20rem); 
+  height: clamp(3rem, 5%, 4rem); 
   background: linear-gradient(to right, #9bec00, #06d001);
   color: #fff;
   font-size: clamp(1.5rem, 2.5vw, 2rem); /* Scales font size dynamically */

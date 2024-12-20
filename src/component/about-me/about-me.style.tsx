@@ -68,8 +68,9 @@ export const AboutMeDescriptionHeading = styled.h2`
 export const AboutMeDescriptionSubHeading = styled.h3`
   margin-bottom: 2rem;
   font-size: 4rem;
-  color: ${({ theme }) => theme.colors.accent};
-  font-weight: 500;
+  background: linear-gradient(to right, #06d001, #00a8e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   @media (max-width: ${breakpoints.md}) {
     font-size: 2rem;
   }

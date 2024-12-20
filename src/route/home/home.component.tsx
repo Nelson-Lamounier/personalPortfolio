@@ -18,23 +18,17 @@ import ContactInfo from "../../component/contact/info/contact-info.component";
 // Define the props type for the component
 
 const Home = () => {
-  const [entered, setEntered] = useState(false);
   return (
-    <ThemeProvider theme={theme}>
-      <HomeContainer>
-        <HeaderWrapper>
-          <ParticleBackground entered={entered} />
-          <Header />
-        </HeaderWrapper>
-        <AboutMe />
-        <Projects />
+    <HomeContainer>
+      <Header />
 
-        <Resume />
-        <ContactForm />
-        <ContactInfo />
-        <Footer />
-      </HomeContainer>
-    </ThemeProvider>
+      <AboutMe />
+      <Projects />
+      <Resume />
+      <ContactForm />
+      <ContactInfo />
+      <Footer />
+    </HomeContainer>
   );
 };
 

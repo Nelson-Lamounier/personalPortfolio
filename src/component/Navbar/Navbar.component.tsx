@@ -18,17 +18,19 @@ const Navbar: React.FC = () => {
     // Check if the user is on the project page
     const isProjectPage = location.pathname.startsWith("/project/");
 
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY === 0) {
-        setActiveSection("home");
-      } else if (window.scrollY > 399) {
-        setIsScrolled(true);
-      }
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    useEffect(() => {
+      const onScroll = () => {
+        if (window.scrollY === 0) {
+          setIsScrolled(false); // Reset `isScrolled` when at the top
+          setActiveSection("home");
+        } else if (window.scrollY > 399) {
+          setIsScrolled(true); // Set `isScrolled` when scrolling down
+        }
+      };
+    
+      window.addEventListener("scroll", onScroll);
+      return () => window.removeEventListener("scroll", onScroll);
+    }, []);
 
   useEffect(() => {
     const observerOptions = {
@@ -68,7 +70,9 @@ const Navbar: React.FC = () => {
       <NavbarContainer>
         {/* Conditionally Render Navbar */}
         {isProjectPage ? (
-          <NavBar className="navbar navbar-colored">
+          <NavBar className={`navbar ${
+              isScrolled ? "navbar-colored" : "navbar-transparent"
+            }`}>
             {/* Minimal Navbar for Project Page */}
             <Logo>
               <Link to="/">
