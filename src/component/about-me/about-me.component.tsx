@@ -1,6 +1,8 @@
 import { FC } from "react";
 import aboutMeData from "../../data/aboutMeData.json";
 
+import ScrollSection from "../motion/scroll.component";
+
 import {
   HeroButton,
   SectionHeading,
@@ -16,21 +18,23 @@ import {
 } from "./about-me.style";
 
 const AboutMe: FC = () => {
-  const { description, profile } = aboutMeData;
+  const { description, profile, title } = aboutMeData;
 
   return (
-    <AboutMeContainer id="about-me">
-      <SectionHeading>About Me</SectionHeading>
+    <AboutMeContainer>
+      <SectionHeading data-text={title}>{title}</SectionHeading>
       <SectionHeadingLine />
-      <AboutMeCard>
-        <AboutMeDetails>
-          <AboutMeDescriptionSubHeading>
-            {profile.role}
-          </AboutMeDescriptionSubHeading>
-          <AboutMeDescription>{description}</AboutMeDescription>
-          <HeroButton>{profile.buttonText}</HeroButton>
-        </AboutMeDetails>
-      </AboutMeCard>
+      <ScrollSection>
+        <AboutMeCard>
+          <AboutMeDetails>
+            <AboutMeDescriptionSubHeading>
+              {profile.role}
+            </AboutMeDescriptionSubHeading>
+            <AboutMeDescription>{description}</AboutMeDescription>
+            <HeroButton>{profile.buttonText}</HeroButton>
+          </AboutMeDetails>
+        </AboutMeCard>
+      </ScrollSection>
     </AboutMeContainer>
   );
 };

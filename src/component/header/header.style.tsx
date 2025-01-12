@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fonts, breakpoints } from "../commun-styled/commun.styled";
+import { fonts, breakpoints } from "../commun-styled/constants.ts";
 
 export const HeaderContainer = styled.section`
   width: 100%;
@@ -52,7 +52,7 @@ export const Heading = styled.h1`
   font-family: ${fonts.family.primary};
   font-weight: 900;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.light}; 
+  color: ${({ theme }) => theme.colors.light};
   text-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
   letter-spacing: 0.2rem;
   margin: 0;
@@ -65,7 +65,7 @@ export const Heading = styled.h1`
 // Paragraph Header
 export const ParagraphHeader = styled.p`
   font-size: clamp(2rem, 4vw, 5rem);
-  color: ${({ theme }) => theme.colors.accent}; 
+  color: ${({ theme }) => theme.colors.accent};
   margin: 1rem 0;
   font-family: ${fonts.family.secondary};
   font-weight: ${fonts.weights.light};
@@ -77,7 +77,7 @@ export const ParagraphHeader = styled.p`
 // Sub Heading
 export const SubHeading = styled.h3`
   font-size: clamp(1.5rem, 2vw, 3rem); /* Scales between 1.5rem and 3rem */
-  color: ${({ theme }) => theme.colors.lightGray}; 
+  color: ${({ theme }) => theme.colors.lightGray};
   letter-spacing: 0.3rem;
 
   max-width: 90%; /* Adjusts width dynamically */
@@ -100,6 +100,12 @@ export const PersonImg = styled.img`
     height: 35rem;
     margin-right: 10rem;
   }
+      @media (max-width: ${breakpoints.lg}) {
+    width: 25rem;
+    height: 25rem;
+    margin-right: 10rem;
+  }
+
 
   @media (max-width: ${breakpoints.md}) {
     display: none;
@@ -109,5 +115,3 @@ export const PersonImg = styled.img`
     display: none;
   }
 `;
-
-

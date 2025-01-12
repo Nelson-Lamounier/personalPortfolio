@@ -3,6 +3,8 @@ import resumeData from "../../data/resumeData.json"
 
 import { FaGraduationCap, FaBriefcase, FaCode, FaTasks, FaMusic } from "react-icons/fa";
 
+import ScrollSection from "../motion/scroll.component";
+
 import {
   SectionHeadingLine,
   SectionHeading,
@@ -146,8 +148,9 @@ const Resume: React.FC = () => {
     <>
     <ResumeContainer id="resume">
       <ResumeContent>
-        <SectionHeading>Resume</SectionHeading>
+        <SectionHeading data-text="Resume">Resume</SectionHeading>
         <SectionHeadingLine></SectionHeadingLine>
+        <ScrollSection> 
         <ResumeCard>
           <ResumeBullets>
             <BulletContainer>
@@ -157,6 +160,7 @@ const Resume: React.FC = () => {
           </ResumeBullets>
           <ResumeBulletDetails>{getResumeScreens()}</ResumeBulletDetails>
         </ResumeCard>
+        </ScrollSection>
       </ResumeContent>
     </ResumeContainer>
     <StyleContainer/>

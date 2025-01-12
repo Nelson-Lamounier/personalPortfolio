@@ -1,48 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
-export const breakpoints = {
-  xl: "120rem",   
-  lg: "102.4rem", 
-  md: "76.8rem",  
-  sm: "48rem",    
-};
+import {breakpoints,fonts} from "./constants.ts"
 
-export const theme = {
-  colors: {
-    backgroundPrimaryOpacity: "var(--background-primary-opacity)",
-    backgroundSecondaryOpacity: "var(--background-secondary-opacity)",
-    gradientStart: "var(--background-gradient-start)",
-    gradientEnd: "var(--background-gradient-end)",
-    textGradientStart: "var(--text-gradient-start)",
-    textGradientEnd: "var(--text-gradient-end)",
-    backgroundPrimary: "var(--background-primary)",
-    backgroundSecondary: "var(--background-secondary)",
-    light: "var(--light)",
-    lightGray: "var(--light-gray)",
-    darkGray: "var(--dark-gray)",
-    accent: "var(--accent)",
-    accentLight: "var(--accent-light)",
-    buttonPrimary: "var(--button-primary)",
-    buttonSecundary: "var(--button-secondary)"
-  },
-};
-
-export const fonts = {
-  family: {
-    primary: "var(--font-primary)",
-    secondary: "var(--font-secondary)",
-  },
-  sizes: {
-    h1: "var(--font-size-h1)",
-    h2: "var(--font-size-h2)",
-    h3: "var(--font-size-h3)",
-
-  },
-  weights: {
-    light:"var(--font-weight-light)",
-    bold: "var(--font-weight-bold)",
-  },
-};
 
 // Keyframes for fade-in animation
 const fadeAnimation = keyframes`
@@ -57,16 +16,38 @@ const fadeAnimation = keyframes`
 `;
 
 // Section Heading
-export const SectionHeading = styled.h1`
-  font-family ${fonts.family.primary};
+export const SectionHeading = styled.h2`
+   position: relative; /* Ensures ::after is relative to this component */
+  font-family: ${fonts.family.primary};
   font-size: ${fonts.sizes.h2};
   text-transform: uppercase;
   font-weight: 700;
-  color: ${({theme}) => theme.colors.light};
+  color: ${({ theme }) => theme.colors.light};
   margin-right: 4rem;
+  z-index: 1;
+  line-height: 1;
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    line-height: 0.9;
+    top: -3rem; 
+    left: 0; 
+    color: #414141;
+    opacity: 0.5;
+    transform: scaleY(1);
+    transform-origin: top;
+    width: 100%; /* Scales with the heading */
+    font-size: ${fonts.sizes.h1};
+    z-index: -1;
+        @media (max-width: 768px) {
+    font-size: 5rem;
+    margin-right: 0;
+  }
+  }
 
     @media (max-width: 768px) {
-    font-size: 6rem;
+    font-size: 5rem;
     margin-right: 0;
   }
 
@@ -74,7 +55,6 @@ export const SectionHeading = styled.h1`
     font-size: 4rem;
   }
 `;
-
 
 // Section Heading Line
 export const SectionHeadingLine = styled.div`
@@ -96,8 +76,8 @@ export const SectionHeadingLine = styled.div`
 
 // Banner Button
 export const BannerButton = styled.button`
-  width: clamp(15rem, 20%, 20rem); 
-  height: clamp(3rem, 5%, 4rem); 
+  width: clamp(15rem, 20%, 20rem);
+  height: clamp(3rem, 5%, 4rem);
   background: linear-gradient(to right, #9bec00, #06d001);
   color: #fff;
   font-size: clamp(1.5rem, 2.5vw, 2rem); /* Scales font size dynamically */
@@ -146,14 +126,14 @@ export const HeroButton = styled.button`
   font-size: 1.8rem;
   margin-top: 2rem;
   padding: 0.5rem 2rem;
-  color: ${({ theme }) => theme.colors.buttonPrimary}; 
+  color: ${({ theme }) => theme.colors.buttonPrimary};
   border: 0.1rem solid ${({ theme }) => theme.colors.buttonPrimary};
   border-radius: 2.5rem;
   cursor: pointer;
   background-color: transparent;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.buttonSecundary}; 
+    color: ${({ theme }) => theme.colors.buttonSecundary};
     border: 0.1rem solid ${({ theme }) => theme.colors.buttonSecundary};
   }
 

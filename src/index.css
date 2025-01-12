@@ -69,6 +69,7 @@
   list-style-type: none;
   font-family:  "Kanit", serif;
   font-weight: 400;
+  max-width: 100vw;
 }
 
 html {

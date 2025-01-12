@@ -6,7 +6,7 @@ import ParticleBackground from "./component/particles.component/particle-backgou
 import Home from "./route/home/home.component";
 import Navigation from "./route/navigation/navigation.component";
 import ProjectDecription from "./component/project-description/project-description.component";
-import { theme } from "./component/commun-styled/commun.styled";
+import { theme } from "./component/commun-styled/constants.ts";
 
 
 const App: FC = () => {

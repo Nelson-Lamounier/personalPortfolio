@@ -1,21 +1,23 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { breakpoints } from "../commun-styled/commun.styled";
+
+import { breakpoints, fonts } from "../commun-styled/constants.ts";
 
 export const StyleContainer = styled.div`
   width: 100%;
   padding: 10rem 5rem;
-    background: linear-gradient(
+  background: linear-gradient(
     360deg,
     ${({ theme }) => theme.colors.backgroundPrimaryOpacity},
     ${({ theme }) => theme.colors.backgroundSecondaryOpacity}
   );
-   z-index: 10;
-`
+  z-index: 10;
+`;
 
 // Container for Section 3
 export const ProjectContainer = styled.section`
+position: relative;
   width: 100%;
   padding: 10rem 5rem;
   background: linear-gradient(
@@ -38,10 +40,68 @@ export const ProjectContainer = styled.section`
   }
 `;
 
+// Section Heading
+export const PortfolioHeading = styled.h2`
+  position: relative; 
+  font-family: ${fonts.family.primary};
+  font-size: ${fonts.sizes.h2};
+  text-transform: uppercase;
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.light};
+  margin-right: 4rem;
+  z-index: 1;
+
+  &::after {
+    content: attr(data-text);
+    position: absolute; 
+    top: 10; 
+    left: -8rem; 
+    color: #414141;
+    opacity: 0.5;
+    transform: scaleY(1);
+    transform-origin: top;
+    width: 100%; /* Scales with the heading */
+    font-size: ${fonts.sizes.h1};
+    z-index: -1;
+  }
+
+
+
+  }
+
+    @media (max-width: 768px) {
+    font-size: 6rem;
+    margin-right: 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 4rem;
+  }
+`;
+
+// Section Heading Line
+export const PortfolioHeadingLine = styled.div`
+  width: 10rem;
+  height: 0.2rem;
+  background-color: #16ff00;
+  margin-bottom: 5rem;
+
+  @media (max-width: ${breakpoints.md}) {
+    width: 8rem;
+    margin-bottom: 8rem;
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    width: 6rem;
+    margin-bottom: 6rem;
+  }
+`;
+
 // Wrapper for Projects
 export const ProjectsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin: 10rem 0;
 
   @media (max-width: ${breakpoints.md}) {
     gap: 1.5rem;
@@ -54,6 +114,7 @@ export const ProjectsWrapper = styled.div`
 
 export const Project = styled.div`
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -76,11 +137,11 @@ export const ProjectText = styled.div`
   text-align: center;
   letter-spacing: 0.1rem;
   position: absolute;
-  top: -10rem;
+  top: -15rem;
   z-index: 10;
   transition: top 0.3s;
   ${Project}:hover & {
-    top: 5rem;
+    top: 10rem;
     transition: top 0.3s 0.3s;
   }
 `;
@@ -109,7 +170,7 @@ export const ProjectTechnologies = styled.h4`
 
 // Project Image
 export const ProjectImg = styled.img`
-  width: 40rem;
+  width: 30rem;
   transition: opacity 0.3s;
   border: 0.1rem solid ${({ theme }) => theme.colors.accent};
   padding: 2rem;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoints } from "../commun-styled/commun.styled";
+import { breakpoints } from "../commun-styled/constants.ts";
 
 export const ProjectDescriptionContainer = styled.section`
   width: 100%;
@@ -62,7 +62,8 @@ export const Paragraph = styled.p`
   font-weight: 200;
 
   @media (max-width: ${breakpoints.md}) {
-    text-align: center; /* Center-align text on smaller screens */
+    text-align: center; 
+  
   }
 `;
 
@@ -105,7 +106,7 @@ export const SkillsList = styled.ul`
       ${({ theme }) => theme.colors.textGradientEnd}
     );
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;HavHave you 
+    -webkit-text-fill-color: transparent;
   }
 `;
 

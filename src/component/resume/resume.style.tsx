@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoints } from "../commun-styled/commun.styled";
+import { breakpoints } from "../commun-styled/constants.ts";
 
 interface BulletProps {
   selected: boolean;
