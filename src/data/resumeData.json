@@ -8,28 +8,33 @@
     ],
     "education": [
       {
-        "heading": "University of Legon Accra, Ghana",
-        "subHeading": "BACHELOR OF SCIENCE INFORMATION TECHNOLOGY",
-        "fromDate": "2014",
-        "toDate": "2018"
+        "heading": "Dublin Business School, Dublin, Ireland ",
+        "subHeading": "Higher Diploma in Science in Computing (Web & Cloud Technologies)",
+        "fromDate": "2022",
+        "toDate": "2024"
       },
       {
-        "heading": "National Youth Service Corps",
-        "subHeading": "Ministry Of Science And Technology. Uyo Akwa Ibom State",
-        "fromDate": "2019",
+        "heading": "Dublin Business School, Dublin, Ireland ",
+        "subHeading": "BA (Honours) in Digital Marketing and Cloud Computing",
+        "fromDate": "2016",
         "toDate": "2020"
-      },
-      {
-        "heading": "High School",
-        "subHeading": "Command Secondary School Mbiri",
-        "fromDate": "2007",
-        "toDate": "2012"
       }
     ],
     "workHistory": [
       {
-        "heading": "Ehizeex Technology",
-        "subHeading": "FULL STACK DEVELOPER INTERN",
+        "heading": "Amazon Web Services (AWS)",
+        "subHeading": "Account Access Management Specialist",
+        "fromDate": "2022",
+        "toDate": "Present",
+        "descriptions": [
+          "Developed an ecommerce website with a dashboard for managing products, reviews, users, and payments.",
+          "Integrated the web app with backend services for user onboarding with dynamic forms.",
+          "Designed and implemented UI based on provided designs."
+        ]
+      },
+      {
+        "heading": "Freelance Web Developer",
+        "subHeading": "Freelance Web Developer",
         "fromDate": "2021",
         "toDate": "Present",
         "descriptions": [
@@ -41,6 +46,7 @@
     ],
     "skills": [
       { "skill": "JavaScript", "ratingPercentage": 85 },
+      { "skill": "Typescript", "ratingPercentage": 80 },
       { "skill": "React JS", "ratingPercentage": 85 },
       { "skill": "Express JS", "ratingPercentage": 89 },
       { "skill": "Node JS", "ratingPercentage": 89 },
@@ -51,16 +57,16 @@
         "title": "Personal Portfolio Website",
         "duration": { "fromDate": "2020", "toDate": "2021" },
         "description": "A personal portfolio to showcase my projects and details.",
-        "subHeading": "Technologies Used: React JS, Bootstrap"
+        "subHeading": "Technologies Used: React JS"
       }
     ],
     "interests": [
       {
-        "heading": "Teaching",
+        "heading": "English",
         "description": "I enjoy teaching and sharing knowledge as I believe in learning through collaboration."
       },
       {
-        "heading": "Music",
+        "heading": "Portuguese",
         "description": "Listening to music helps me unwind and keeps me focused."
       }
     ]

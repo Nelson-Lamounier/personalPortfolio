@@ -11,7 +11,6 @@ import {
   ProfileDetailsRole,
   ProfileOptions,
   ProfilePicture,
-  Button,
   PrimaryButton,
   HighlightedButton,
   ProfileRoleTagline,

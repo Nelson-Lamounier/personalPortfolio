@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import portfolioData from "../../data/portfolioData.json";
 import "swiper/css";
 import "swiper/css/pagination";

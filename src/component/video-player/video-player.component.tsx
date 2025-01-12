@@ -1,7 +1,7 @@
 import { FC } from "react";
 import {VideoWrapper, Controls, VideoBarWrapper, VideoBar, Button, Video,} from "./video-player.style"
 
-import { FaPlayCircle, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { FaPlayCircle,} from "react-icons/fa";
 
 
 interface VideoPlayerProps {

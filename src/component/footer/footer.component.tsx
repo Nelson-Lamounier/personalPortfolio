@@ -1,4 +1,4 @@
-import footerData from "../../data/footerData.json";
+
 import SocialLinks from "../contact/social-link/social-link.component";
 
 import { FooterContainer, FooterNav, CopyrightText } from "./footer.styled";
