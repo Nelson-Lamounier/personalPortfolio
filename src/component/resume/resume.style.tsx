@@ -14,6 +14,10 @@ export const StyleContainer = styled.div`
     ${({ theme }) => theme.colors.backgroundSecondaryOpacity}
   );
   z-index: 10;
+
+  @media (max-width: ${breakpoints.sm}) {
+    padding: 2rem;
+  }
 `;
 
 export const ResumeContainer = styled.section`
@@ -26,11 +30,7 @@ export const ResumeContainer = styled.section`
   z-index: 10;
 
   @media (max-width: ${breakpoints.md}) {
-    padding: 3rem 5rem;
-  }
-
-  @media (max-width: ${breakpoints.sm}) {
-    padding: 2rem;
+    padding: 1rem;
   }
 `;
 
@@ -39,6 +39,7 @@ export const ResumeContent = styled.div`
   display: flex;
   flex-direction: column;
   margin: 5rem;
+  height: 100rem;
 
   @media (max-width: ${breakpoints.md}) {
     margin: 3rem;
@@ -51,12 +52,7 @@ export const ResumeContent = styled.div`
 
 export const ResumeCard = styled.div`
   display: flex;
-  height: 50rem;
-
-  @media (max-width: ${breakpoints.md}) {
-    flex-direction: column;
-    height: auto;
-  }
+  height: 60rem;
 `;
 
 export const ResumeBullets = styled.div`
@@ -66,9 +62,13 @@ export const ResumeBullets = styled.div`
   height: 100%;
   width: 40%;
 
+  @media (max-width: ${breakpoints.lg}) {
+    width: 30%;
+  }
+
   @media (max-width: ${breakpoints.md}) {
-    width: 100%;
-    padding: 1.5rem;
+    width: 50%;
+    box-shadow: none;
   }
 `;
 
@@ -84,25 +84,37 @@ export const ResumeBulletDetails = styled.div`
 
   @media (max-width: ${breakpoints.md}) {
     width: 100%;
-    padding: 2rem 0;
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  @media (max-width: ${breakpoints.sm}) {
+    font-size: 0.5rem;
   }
 `;
 
 export const ExperienceDescription = styled.div`
-  margin: 1rem 0 0 0;
+  margin: 0 0 2rem 0;
   text-align: justify;
   max-width: 100%;
+  font-size: 1.5rem;
+  font-weight: 100;
 
-  @media (max-width: ${breakpoints.sm}) {
-    font-size: 1.4rem;
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 1.2rem;
+  }
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 1rem;
   }
 `;
 
 export const ResumeDescriptionText = styled.span`
-  font-size: 2.5rem;
+  font-size: 2rem;
 
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 1rem;
+  }
   @media (max-width: ${breakpoints.sm}) {
-    font-size: 1.6rem;
+    font-size: 0.5rem;
   }
 `;
 
@@ -160,6 +172,10 @@ export const BulletLabel = styled.span`
   font-size: 2rem;
   white-space: nowrap;
 
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 1.5rem;
+  }
+
   @media (max-width: ${breakpoints.sm}) {
     font-size: 1.4rem;
   }
@@ -181,13 +197,17 @@ export const BulletIcons = styled.div`
   z-index: 2;
   padding: 2rem;
   position: absolute;
+
+  @media (max-width: ${breakpoints.md}) {
+    width: 1rem;
+  }
 `;
 
 export const ResumeScreenContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 50rem;
+  height: 60rem;
   width: 100%;
 `;
 
@@ -204,6 +224,13 @@ export const ResumeMainHeading = styled.div`
   span {
     color: ${({ theme }) => theme.colors.lightGray};
     font-size: 2rem;
+
+    @media (max-width: ${breakpoints.md}) {
+      font-size: 1.5rem;
+    }
+    @media (max-width: ${breakpoints.sm}) {
+      font-size: 1.2rem;
+    }
   }
 `;
 
@@ -219,20 +246,36 @@ export const ResumeSubHeading = styled.span`
   font-size: 2rem;
   margin: 1rem 0 0 0;
   z-index: 10;
-  color: ${({theme}) => theme.colors.accent}
+  color: ${({ theme }) => theme.colors.accent};
+
+  @media (max-width: ${breakpoints.sm}) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const ResumeHeadingDescription = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: justify;
   z-index: 10;
+
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 1.2rem;
+  }
+  @media (max-width: ${breakpoints.sm}) {
+    font-size: 1rem;
+  }
 `;
 
 export const HeadingDate = styled.span`
-  border: 0.1rem solid ${({theme}) => theme.colors.accent};
+  border: 0.1rem solid ${({ theme }) => theme.colors.accent};
   padding: 0.4rem 1.2rem;
   font-size: 1.4rem;
   border-radius: 2%;
+
+  @media (max-width: ${breakpoints.lg}) {
+    padding: 0.1rem 0.8rem;
+    font-size: 0.5rem;
+  }
 `;
 
 export const SkillParent = styled.div`
@@ -240,18 +283,20 @@ export const SkillParent = styled.div`
   flex-direction: column;
   position: relative;
 
-
   @media (max-width: ${breakpoints.md}) {
     align-items: center;
   }
 `;
 
-
 // Skill label
 export const SkillLabel = styled.span`
   font-size: 2rem;
-  color: ${({theme}) => theme.colors.lightGray};
+  color: ${({ theme }) => theme.colors.lightGray};
   margin-right: 1rem;
+
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 1.6rem;
+  }
   @media (max-width: ${breakpoints.sm}) {
     font-size: 1.4rem;
   }
@@ -269,6 +314,6 @@ export const ActivePercentageBar = styled.div<{ percentage: number }>`
   height: 2rem;
   transition: 0.8s ease;
   position: absolute;
-  background-color: ${({theme}) => theme.colors.accent};
+  background-color: ${({ theme }) => theme.colors.accent};
   width: ${(props) => props.percentage}%;
 `;

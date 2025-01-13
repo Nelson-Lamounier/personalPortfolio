@@ -20,6 +20,7 @@ export const HeaderContainer = styled.section`
   @media (max-width: ${breakpoints.md}) {
     flex-direction: column;
     justify-content: center;
+    height: 80vh;
   }
 `;
 

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 
 import videoDataInfo from "../../data/videoData.json";
+import ProjectDetails from "../project-details/project-detail.component";
 
 
 import Carousel from "../carousel/carousel.component";
@@ -14,14 +15,11 @@ import {
 import VideoPlayer from "../video-player/video-player.component";
 import {
   ProjectDescriptionContainer,
-  Paragraph,
-  SkillsList,
-  ParentComponent,
-  AboutMeDescriptionSubHeading,
   SubButton,
   DemoButton,
   HeroContainer,
 } from "./project-description.styled";
+
 
 const ProjectDecription: FC = () => {
   const { id } = useParams();
@@ -37,6 +35,8 @@ const ProjectDecription: FC = () => {
           <SectionHeading>
             {video.projectName}
             <SectionHeadingLine />
+            </SectionHeading>
+       
             <SubButton>
             <DemoButton>Demo</DemoButton>
             <DemoButton
@@ -48,28 +48,14 @@ const ProjectDecription: FC = () => {
               Code Repository
             </DemoButton>
           </SubButton>
-          </SectionHeading>
-          <VideoPlayer src={video.Link} />
         </HeroContainer>
+          <VideoPlayer src={video.Link} />
 
-        <ParentComponent>
-          <div>
-            <Paragraph>{video.projectOverview}</Paragraph>
-            <Paragraph>{video.projectOutcome}</Paragraph>
-          </div>
-          <div>
-            <AboutMeDescriptionSubHeading>
-              Skills Demonstrated
-            </AboutMeDescriptionSubHeading>
-            <SkillsList>
-              {video.skillsDemonstrated.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </SkillsList>
-          </div>
-        </ParentComponent>
+
 
       </ProjectDescriptionContainer>
+      
+      <ProjectDetails video={video}  />
       <Carousel />
     </>
   );

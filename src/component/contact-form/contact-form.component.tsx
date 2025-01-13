@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
           {sectionHeading}
         </SectionHeading>
         <SectionHeadingLine />
-        <ContactWrapper className="center">
+        <ContactWrapper>
           <FormHeading>{formHeading}</FormHeading>
           <motion.div
             variants={containerVariants}

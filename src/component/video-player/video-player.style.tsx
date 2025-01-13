@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { breakpoints } from "../commun-styled/constants";
+
 export const Controls = styled.div`
   width: 100%;
   position: absolute;
@@ -20,12 +22,17 @@ export const Video = styled.video`
   margin-right: 20rem;
 `;
 export const VideoWrapper = styled.div`
-  width: 80%;
-  height: 40%;
+  width: 90%;
+  height: 60%;
   box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.7);
   overflow: hidden;
   ${Controls}:hover & {
   transform: translateY(0);
+  margin-right: 20rem;
+
+
+
+
 `;
 
 export const VideoBarWrapper = styled.div`

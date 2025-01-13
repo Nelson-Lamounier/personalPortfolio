@@ -3,7 +3,7 @@
     {
       "id": 1,
       "projectName": "Magic Rainbow/ Website",
-      "projectOverview": "Developed a comprehensive full-stack web application for a client to enhance their online presence and digital marketing capabilities. ",
+      "projectOverview": "This project involved developing a website for Magic Rainbow Painting and Decorating, a painting and decorating service company based in Ireland, to strengthen their online presence and streamline customer interactions.",
       "keyTechnicalAchievements": {
         "frontend": [
           "Engaging home page",
@@ -28,7 +28,7 @@
         "User experience (UX) design",
         "Digital marketing principles"
       ],
-      "projectOutcome": "Successfully delivered a professional, fully functional website that improved the client's online visibility and provided an intuitive user experience. The project showcased the ability to combine technical expertise with strategic digital marketing approaches.",
+      "projectOutcome": "The redesigned website resulted in a more responsive and user-friendly interface, improving navigation and accessibility across devices. The integration of a streamlined contact form enabled clients to request quotes easily, leading to a measurable increase in inquiries and bookings. Optimized for search engines, the site also drove increased traffic from social media and organic search, directly contributing to higher customer engagement and revenue growth.",
       "technologiesUsed": [
         "React",
         "AWS (Lambda, Hosting)",
@@ -42,8 +42,8 @@
     },
     {
       "id": 2,
-      "projectName": "Art Wal Website",
-      "projectOverview": "Developed a comprehensive full-stack web application for a client to enhance their online presence and digital marketing capabilities. The project involved creating a responsive, feature-rich website using modern web technologies and cloud services.",
+      "projectName": "Art Wall Website",
+      "projectOverview": "This project involved creating a website for Art Wall Ireland, a company specializing in Vertical Printing, to showcase their work and expand their reach to a wider audience.",
       "keyTechnicalAchievements": {
         "frontend": [
           "Engaging home page",
@@ -68,7 +68,7 @@
         "User experience (UX) design",
         "Digital marketing principles"
       ],
-      "projectOutcome": "Successfully delivered a professional, fully functional website that improved the client's online visibility and provided an intuitive user experience. The project showcased the ability to combine technical expertise with strategic digital marketing approaches.",
+      "projectOutcome": "Designed with a clean, visually appealing layout to highlight the company’s portfolio of unique wall printed designs. The addition of an easy-to-use inquiry form simplified the process for customers to request custom designs or learn more about available products. Through SEO optimization and the integration of engaging visuals, the website significantly improved the company’s online visibility. The project successfully positioned Art Wall Ireland as a go-to destination for artistic wall solutions while driving increased customer inquiries and interest.",
       "technologiesUsed": [
         "React",
         "AWS (Lambda, Hosting)",
@@ -77,13 +77,13 @@
         "API Integration"
       ],
       "Link": "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/potfolio-videos/verticalPrinting.mp4",
-      "Demo": "www.link.com",
-      "Repository": "gitlab.com"
+      "Demo": "https://art-wall-vertical-printing.netlify.app",
+      "Repository": "https://github.com/Nelson-Lamounier/artwall"
     },
     {
       "id": 3,
-      "projectName": "Ecommerce Website",
-      "projectOverview": "Developed a comprehensive full-stack web application for a client to enhance their online presence and digital marketing capabilities. The project involved creating a responsive, feature-rich website using modern web technologies and cloud services.",
+      "projectName": "E-commerce Website",
+      "projectOverview": "This project involved designing and developing a mocked e-commerce website for GymBs, a fictional fitness apparel and accessories brand, to serve as a proof-of-concept for modern e-commerce solutions.",
       "keyTechnicalAchievements": {
         "frontend": [
           "Engaging home page",
@@ -108,7 +108,7 @@
         "User experience (UX) design",
         "Digital marketing principles"
       ],
-      "projectOutcome": "Successfully delivered a professional, fully functional website that improved the client's online visibility and provided an intuitive user experience. The project showcased the ability to combine technical expertise with strategic digital marketing approaches.",
+      "projectOutcome": "The website featured a dynamic, responsive layout tailored to an active and fitness-conscious audience. A comprehensive product catalog was created, complete with filtering and search functionalities to enhance user experience. A mock checkout system was implemented to demonstrate a seamless purchasing process, complete with secure payment simulation. Focused on performance and user-centric design, this project showcased my ability to create scalable, visually engaging e-commerce platforms. By incorporating best practices in UI/UX design, the website provided a professional and intuitive shopping experience, illustrating the potential for future real-world applications.",
       "technologiesUsed": [
         "React",
         "AWS (Lambda, Hosting)",
@@ -122,8 +122,8 @@
     },
     {
       "id": 4,
-      "projectName": "gymBS Ecommerce/ Website",
-      "projectOverview": "Developed a comprehensive full-stack web application for a client to enhance their online presence and digital marketing capabilities. The project involved creating a responsive, feature-rich website using modern web technologies and cloud services.",
+      "projectName": "Portfolio Website",
+      "projectOverview": "This project involved building my personal portfolio website to showcase my skills, experiences, and projects as a Full Stack Developer and Web Designer. The goal was to create a professional online presence that reflects my technical expertise and creative approach to web development.",
       "keyTechnicalAchievements": {
         "frontend": [
           "Engaging home page",
@@ -148,7 +148,7 @@
         "User experience (UX) design",
         "Digital marketing principles"
       ],
-      "projectOutcome": "Successfully delivered a professional, fully functional website that improved the client's online visibility and provided an intuitive user experience. The project showcased the ability to combine technical expertise with strategic digital marketing approaches.",
+      "projectOutcome": "The site features a clean and modern UI, designed to highlight my work while maintaining ease of navigation. It includes sections for project showcases, skills, and an intuitive contact form to facilitate communication with potential clients or employers. Built using React, TypeScript, and Vite, the website demonstrates my proficiency in modern web development technologies. By optimizing the site for performance and SEO, I achieved a platform that not only represents my personal brand effectively but also serves as an engaging and functional space for visitors.",
       "technologiesUsed": [
         "React",
         "AWS (Lambda, Hosting)",

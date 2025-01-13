@@ -4,122 +4,73 @@ import { breakpoints } from "../commun-styled/constants.ts";
 
 export const ProjectDescriptionContainer = styled.section`
   width: 100%;
-  z-index: 10;
-
-`;
-
-export const SectionHeading = styled.div`
-  position: relative;
-`;
-
-export const HeroContainer = styled.div`
-  width: 100%;
+  height: 100vh;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  padding: 0 10rem 0 0 ;
+  z-index: 10;
   background: linear-gradient(
     360deg,
     ${({ theme }) => theme.colors.backgroundPrimaryOpacity},
     ${({ theme }) => theme.colors.backgroundSecondaryOpacity}
   );
-  justify-content: space-between;
+
+      @media (max-width: ${breakpoints.lg}) {
+    flex-direction: column;
+    justify-content: center;
+  padding: 10rem 0 20rem 0 ;
+  }
+`;
+
+export const SectionHeading = styled.div`
   position: relative;
-  z-index: 10;
-  padding: 15rem 10rem;
-
-  @media (max-width: ${breakpoints.md}) {
-    padding: 8rem 2rem;
-  }
-
-  @media (max-width: ${breakpoints.sm}) {
-    padding: 5rem 1rem;
-  }
+  padding: 10rem;
+  background-color: red;
+   z-index: 20;
 `;
 
-export const ParentComponent = styled.div`
-  display: flex;
-  flex-direction: row;
-  background-color: ${({ theme }) => theme.colors.backgroundPrimary};
-  justify-content: space-between;
-  position: relative;
-  z-index: 10;
-  padding: 0 5rem 0 10rem;
-
-  @media (max-width: ${breakpoints.md}) {
-    flex-direction: column; /* Stack items on smaller screens */
-    padding: 0 2rem;
-  }
-
-  @media (max-width: ${breakpoints.sm}) {
-    padding: 0 1rem;
-  }
-`;
-
-export const Paragraph = styled.p`
-  font-size: 3rem;
-  color: ${({ theme }) => theme.colors.lightGray};
-  line-height: 1.5;
-  letter-spacing: 0.2rem;
-  margin: 4rem 10rem;
-  font-weight: 200;
-
-  @media (max-width: ${breakpoints.md}) {
-    text-align: center; 
-  
-  }
-`;
-
-export const AboutMeDescriptionSubHeading = styled.h3`
-  margin-bottom: 2rem;
-  background: linear-gradient(to right, #06d001, #00a8e8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 3rem;
-  font-weight: 200;
+export const HeroContainer = styled.div`
+  width: 50%;
+  padding-left: 10%;
+  text-align: left;
   z-index: 10;
 
+  @media (max-width: ${breakpoints.lg}) {
+    width: 60%;
+  }
+
   @media (max-width: ${breakpoints.md}) {
-    font-size: 2rem;
-  }
-
-  @media (max-width: ${breakpoints.sm}) {
-    font-size: 1.8rem;
+    width: 90%;
+    text-align: center;
+    padding-left: 0;
   }
 `;
 
-export const SkillsList = styled.ul`
-  list-style: none;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-wrap: wrap;
 
-
-  li {
-    margin: 1rem;
-    padding: 1rem 1.5rem;
-    border-bottom: 0.1rem solid ${({ theme }) => theme.colors.lightGray};
-    border-radius: 0.5rem;
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colors.lightGray};
-    font-weight: 200;
-    background: linear-gradient(
-      to right,
-      ${({ theme }) => theme.colors.textGradientStart},
-      ${({ theme }) => theme.colors.textGradientEnd}
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-`;
 
 export const SubButton = styled.div`
+position: absolute;
+bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.backgroundPrimary};
   z-index: 10;
+
+      @media (max-width: ${breakpoints.lg}) {
+    flex-direction: row;
+    left: 2rem;
+
+  }
+
 `;
 
 export const DemoButton = styled.button`
-  width: 100%;
+  width: 30rem;
   background-color: transparent;
   border-radius: 2.5rem;
   color: ${({ theme }) => theme.colors.buttonPrimary};
@@ -127,6 +78,7 @@ export const DemoButton = styled.button`
   cursor: pointer;
   margin: 0 2rem 0 0;
   padding: 1rem;
+   z-index: 10;
 
   font-size: clamp(1rem, 2vw, 1.5rem);
 

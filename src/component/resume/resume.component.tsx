@@ -1,7 +1,7 @@
 import React, { useState, CSSProperties } from "react";
 import resumeData from "../../data/resumeData.json"
 
-import { FaGraduationCap, FaBriefcase, FaCode, FaTasks, FaMusic } from "react-icons/fa";
+import { FaGraduationCap, FaBriefcase, FaCode, FaTasks, FaLanguage } from "react-icons/fa";
 
 import ScrollSection from "../motion/scroll.component";
 
@@ -42,7 +42,7 @@ const iconMapping = {
   FaBriefcase: FaBriefcase,
   FaCode: FaCode,
   FaTasks: FaTasks,
-  FaMusic: FaMusic,
+  FaLanguage: FaLanguage,
 };
 
 const Resume: React.FC = () => {
@@ -50,7 +50,7 @@ const Resume: React.FC = () => {
   const [carousalOffsetStyle, setCarousalOffsetStyle] = useState<CSSProperties>({});
 
   const handleCarousal = (index: number) => {
-    const offsetHeight = 500; // Adjust height as needed
+    const offsetHeight = 600; // Adjust height as needed
     setCarousalOffsetStyle({ transform: `translateY(-${index * offsetHeight}px)` });
     setSelectedBulletIndex(index);
   };
@@ -129,13 +129,13 @@ const Resume: React.FC = () => {
       </ResumeScreenContainer >,
 
       /* Interests */
-      <ResumeScreenContainer  key="interests">
-        {resumeData.interests.map((interest, index) => (
+      <ResumeScreenContainer  key="languages">
+        {resumeData.languages.map((language, index) => (
           <ResumeHeadingContainer key={index}>
             <ResumeMainHeading>
-              <ResumeDescriptionText>{interest.heading}</ResumeDescriptionText>
+              <ResumeDescriptionText>{language.heading}</ResumeDescriptionText>
             </ResumeMainHeading>
-            <ResumeHeadingDescription>{interest.description}</ResumeHeadingDescription>
+            <ResumeHeadingDescription>{language.description}</ResumeHeadingDescription>
           </ResumeHeadingContainer>
         ))}
       </ResumeScreenContainer >,

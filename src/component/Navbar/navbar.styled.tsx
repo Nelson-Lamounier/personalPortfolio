@@ -1,17 +1,10 @@
 import styled from "styled-components";
 
-const breakpoints = {
-  xl: "1200px",
-  lg: "1024px",
-  md: "768px",
-  sm: "576px",
-  xs: "480px",
-};
-
+import { breakpoints } from "../commun-styled/constants";
 
 export const NavbarContainer = styled.nav`
   position: relative;
-   width: 100%;
+  width: 100%;
   z-index: 1000;
 `;
 
@@ -19,13 +12,13 @@ export const NavBar = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
-  padding: rem;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   z-index: 100;
   text-transform: uppercase;
   transition: background-color 0.3s ease;
   padding: 4rem;
+  background-color: red;
 
   &.navbar-transparent {
     background-color: transparent;
@@ -33,27 +26,30 @@ export const NavBar = styled.nav`
 
   &.navbar-colored {
     background-color: #111111;
+    box-shadow:  0.1rem 0.5rem 0.5rem ${({ theme }) => theme.colors.accent};
     color: #fff;
   }
-
-    @media (max-width: ${breakpoints.md}) {
-    padding: 1rem 3rem;
+  @media (max-width: ${breakpoints.lg}) {
+    padding: 3rem;
+  }
+  @media (max-width: ${breakpoints.md}) {
+    padding: 2rem;
   }
 
-  @media (max-width: ${breakpoints.sm}) {
-    padding: 1rem 2rem;
-  }
+
 `;
 
 export const Logo = styled.div`
   position: absolute;
-  top: 2rem;
-  left: 10rem;
+  top: 25%;
+  left: 10%;
   img {
     height: 8rem;
     width: auto;
 
-        @media (max-width: ${breakpoints.md}) {
+      @media (max-width: ${breakpoints.lg}) {
+      height: 5rem;
+            @media (max-width: ${breakpoints.md}) {
       height: 5rem;
     }
 
@@ -66,15 +62,19 @@ export const Logo = styled.div`
 // Navigation List
 export const NavList = styled.div`
   display: flex;
-  align-items: center;
-  gap: 10rem;
+  gap: 15rem;
+
+  @media (max-width: ${breakpoints.lg}) {
+  
+    gap: 10rem;
+  }
 
   @media (max-width: ${breakpoints.md}) {
-    gap: 1.5rem;
+    gap: 5rem;
   }
 
   @media (max-width: ${breakpoints.sm}) {
-    gap: 1rem;
+    gap: 3rem;
   }
 
   .nav-link {

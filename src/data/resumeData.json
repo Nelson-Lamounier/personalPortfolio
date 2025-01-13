@@ -1,73 +1,90 @@
 {
-    "bullets": [
-      { "label": "Education", "icon": "FaGraduationCap" },
-      { "label": "Work History", "icon": "FaBriefcase" },
-      { "label": "Skills", "icon": "FaCode" },
-      { "label": "Projects", "icon": "FaTasks" },
-      { "label": "Language", "icon": "FaMusic" }
-    ],
-    "education": [
-      {
-        "heading": "Dublin Business School, Dublin, Ireland ",
-        "subHeading": "Higher Diploma in Science in Computing (Web & Cloud Technologies)",
-        "fromDate": "2022",
-        "toDate": "2024"
-      },
-      {
-        "heading": "Dublin Business School, Dublin, Ireland ",
-        "subHeading": "BA (Honours) in Digital Marketing and Cloud Computing",
-        "fromDate": "2016",
-        "toDate": "2020"
-      }
-    ],
-    "workHistory": [
-      {
-        "heading": "Amazon Web Services (AWS)",
-        "subHeading": "Account Access Management Specialist",
-        "fromDate": "2022",
-        "toDate": "Present",
-        "descriptions": [
-          "Developed an ecommerce website with a dashboard for managing products, reviews, users, and payments.",
-          "Integrated the web app with backend services for user onboarding with dynamic forms.",
-          "Designed and implemented UI based on provided designs."
-        ]
-      },
-      {
-        "heading": "Freelance Web Developer",
-        "subHeading": "Freelance Web Developer",
-        "fromDate": "2021",
-        "toDate": "Present",
-        "descriptions": [
-          "Developed an ecommerce website with a dashboard for managing products, reviews, users, and payments.",
-          "Integrated the web app with backend services for user onboarding with dynamic forms.",
-          "Designed and implemented UI based on provided designs."
-        ]
-      }
-    ],
-    "skills": [
-      { "skill": "JavaScript", "ratingPercentage": 85 },
-      { "skill": "Typescript", "ratingPercentage": 80 },
-      { "skill": "React JS", "ratingPercentage": 85 },
-      { "skill": "Express JS", "ratingPercentage": 89 },
-      { "skill": "Node JS", "ratingPercentage": 89 },
-      { "skill": "Mongo DB", "ratingPercentage": 70 }
-    ],
-    "projects": [
-      {
-        "title": "Personal Portfolio Website",
-        "duration": { "fromDate": "2020", "toDate": "2021" },
-        "description": "A personal portfolio to showcase my projects and details.",
-        "subHeading": "Technologies Used: React JS"
-      }
-    ],
-    "interests": [
-      {
-        "heading": "English",
-        "description": "I enjoy teaching and sharing knowledge as I believe in learning through collaboration."
-      },
-      {
-        "heading": "Portuguese",
-        "description": "Listening to music helps me unwind and keeps me focused."
-      }
-    ]
-  }
+  "bullets": [
+    { "label": "Education", "icon": "FaGraduationCap" },
+    { "label": "Work History", "icon": "FaBriefcase" },
+    { "label": "Skills", "icon": "FaCode" },
+    { "label": "Projects", "icon": "FaTasks" },
+    { "label": "languages", "icon": "FaLanguage" }
+  ],
+  "education": [
+    {
+      "heading": "Dublin Business School, Dublin, Ireland ",
+      "subHeading": "Higher Diploma in Science in Computing (Web & Cloud Technologies)",
+      "fromDate": "2022",
+      "toDate": "2024"
+    },
+    {
+      "heading": "Dublin Business School, Dublin, Ireland ",
+      "subHeading": "BA (Honours) in Digital Marketing and Cloud Computing",
+      "fromDate": "2016",
+      "toDate": "2020"
+    }
+  ],
+  "workHistory": [
+    {
+      "heading": "Amazon Web Services (AWS)",
+      "subHeading": "Account Access Management Specialist",
+      "fromDate": "2022",
+      "toDate": "Present",
+      "descriptions": [
+        "This role allowed me to gain hands-on experience in cloud and network security while collaborating with cross-functional engineering teams to resolve complex account-related issues." ,
+        "By leveraging my expertise in AWS services, I ensured account security and contributed to resolving customer support escalations effectively.",
+        " My comprehensive understanding of AWS products and services enabled me to guide customers in adopting tailored solutions while maintaining a balance between technical problem-solving and clear communication."
+      ]
+    },
+    {
+      "heading": "Freelance Web Developer",
+      "subHeading": "Freelance Web Developer",
+      "fromDate": "2022",
+      "toDate": "Present",
+      "descriptions": [
+        "As a Web Developer and Designer, I focus on creating and managing responsive websites using technologies such as React, Node.js, and MongoDB. My work includes developing user-friendly interfaces, ensuring functionality, and delivering scalable solutions tailored to client needs.",
+        "I have designed and deployed websites for various industries, translating client requirements into effective designs while optimizing performance and cross-device compatibility. My experience includes API integration, implementing security measures, and deploying projects on AWS for reliable hosting and scalability"
+      ]
+    }
+  ],
+  "skills": [
+    { "skill": "JavaScript", "ratingPercentage": 85 },
+    { "skill": "Typescript", "ratingPercentage": 80 },
+    { "skill": "React JS", "ratingPercentage": 85 },
+    { "skill": "Express JS", "ratingPercentage": 89 },
+    { "skill": "Node JS", "ratingPercentage": 89 },
+    { "skill": "Mongo DB", "ratingPercentage": 70 }
+  ],
+  "projects": [
+    {
+      "title": "Personal Portfolio Website",
+      "duration": { "fromDate": "2020", "toDate": "2021" },
+      "description": "Personal portfolio website to showcase my skills, experiences, and projects as a Full Stack Developer and Web Designer.",
+      "subHeading": "Technologies Used: React JS, Typescript, MongoDB, AWS"
+    },
+    {
+      "title": "E-commerce Mocked Website",
+      "duration": { "fromDate": "2020", "toDate": "2021" },
+      "description": "Designing and developing a mocked e-commerce website for GymBs, a fictional fitness apparel and accessories brand, to serve as a proof-of-concept for modern e-commerce solutions.",
+      "subHeading": "Technologies Used: React JS, Typescript, MongoDB, AWS, Express JS, Node JS"
+    },
+    {
+      "title": "Magic Rainbow Painting and Decorating",
+      "duration": { "fromDate": "2022", "toDate": "2023" },
+      "description": "A Website for Magic Rainbow Painting and Decorating, a painting and decorating service company",
+      "subHeading": "Technologies Used: React JS, Typescript, MongoDB, AWS"
+    },
+    {
+      "title": "Art Wall Ireland Website",
+      "duration": { "fromDate": "2020", "toDate": "2021" },
+      "description": "A website for Art Wall Ireland, a company specializing in vertical Printing on walls",
+      "subHeading": "Technologies Used: HTML, CSS, JavaScript, AWS"
+    }
+  ],
+  "languages": [
+    {
+      "heading": "English",
+      "description": "I am fluent in English, with strong communication skills for both professional and casual settings."
+    },
+    {
+      "heading": "Portuguese",
+      "description": "Native Portuguese speaker, allowing me to navigate and connect effectively in multilingual environments. This combination of language skills enables me to collaborate with diverse teams, engage with global clients, and adapt to various cultural contexts seamlessly."
+    }
+  ]
+}

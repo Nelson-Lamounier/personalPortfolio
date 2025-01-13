@@ -54,14 +54,7 @@ export const InfoContainer = styled.div`
   transition: box-shadow 0.5s;
   border: 0.1rem solid rgb(6, 208, 1);
 
-  @media (max-width: ${breakpoints.md}) {
-    padding: 2rem;
-  }
 
-  @media (max-width: ${breakpoints.sm}) {
-    padding: 1.5rem;
-    margin: 1rem;
-  }
 `;
 
 export const ContactText = styled.div`

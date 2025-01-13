@@ -21,7 +21,7 @@ const AboutMe: FC = () => {
   const { description, profile, title } = aboutMeData;
 
   return (
-    <AboutMeContainer>
+    <AboutMeContainer id="about-me">
       <SectionHeading data-text={title}>{title}</SectionHeading>
       <SectionHeadingLine />
       <ScrollSection>

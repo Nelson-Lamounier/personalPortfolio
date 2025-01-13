@@ -1,7 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-import {breakpoints,fonts} from "./constants.ts"
-
+import { breakpoints, fonts } from "./constants.ts";
 
 // Keyframes for fade-in animation
 const fadeAnimation = keyframes`
@@ -17,7 +16,7 @@ const fadeAnimation = keyframes`
 
 // Section Heading
 export const SectionHeading = styled.h2`
-   position: relative; /* Ensures ::after is relative to this component */
+  position: relative; /* Ensures ::after is relative to this component */
   font-family: ${fonts.family.primary};
   font-size: ${fonts.sizes.h2};
   text-transform: uppercase;
@@ -31,8 +30,8 @@ export const SectionHeading = styled.h2`
     content: attr(data-text);
     position: absolute;
     line-height: 0.9;
-    top: -3rem; 
-    left: 0; 
+    top: -3rem;
+    left: 0;
     color: #414141;
     opacity: 0.5;
     transform: scaleY(1);
@@ -40,13 +39,13 @@ export const SectionHeading = styled.h2`
     width: 100%; /* Scales with the heading */
     font-size: ${fonts.sizes.h1};
     z-index: -1;
-        @media (max-width: 768px) {
-    font-size: 5rem;
-    margin-right: 0;
-  }
+    @media (max-width: 768px) {
+      font-size: 5rem;
+      margin-right: 0;
+    }
   }
 
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 5rem;
     margin-right: 0;
   }

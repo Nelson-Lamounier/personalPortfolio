@@ -1,18 +1,17 @@
 {
-    "title": "About Me",
-    "description": "Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.",
-    "highlights": {
-      "bullets": [
-
-        "React and React Native",
-        "Redux for State Management",
-        "Building REST API",
-        "Managing database"
-      ]
-    },
-    "profile": {
-      "name": "Nelson",
-      "role": "Full stack developer",
-      "buttonText": "Download CV ↓"
-    }
+  "title": "About Me",
+  "description": "Full Stack Developer and Web Designer based in Dublin, Ireland, with a background in Computer Science and a Bachelor’s Degree in Digital Marketing. My expertise lies in developing and maintaining responsive, user-friendly interfaces using technologies like React. My professional experience includes roles at AWS and Meta, where I specialized in technical customer support, troubleshooting complex issues, and delivering effective solutions to global clients. As a freelancer, I have completed numerous projects focused on creating scalable, high-performing web applications.",
+  "highlights": {
+    "bullets": [
+      "React and React Native",
+      "Redux for State Management",
+      "Building REST API",
+      "Managing database"
+    ]
+  },
+  "profile": {
+    "name": "Nelson",
+    "role": "Full stack developer",
+    "buttonText": "Download CV ↓"
   }
+}

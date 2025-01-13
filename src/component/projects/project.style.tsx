@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-
 import { breakpoints, fonts } from "../commun-styled/constants.ts";
 
 export const StyleContainer = styled.div`
@@ -17,7 +16,7 @@ export const StyleContainer = styled.div`
 
 // Container for Section 3
 export const ProjectContainer = styled.section`
-position: relative;
+  position: relative;
   width: 100%;
   padding: 10rem 5rem;
   background: linear-gradient(
@@ -30,10 +29,6 @@ position: relative;
   flex-direction: column;
   align-items: center;
   z-index: 10;
-
-  @media (max-width: ${breakpoints.md}) {
-    padding: 8rem 3rem;
-  }
 
   @media (max-width: ${breakpoints.sm}) {
     padding: 6rem 2rem;
@@ -64,9 +59,6 @@ export const PortfolioHeading = styled.h2`
     font-size: ${fonts.sizes.h1};
     z-index: -1;
   }
-
-
-
   }
 
     @media (max-width: 768px) {
@@ -101,10 +93,9 @@ export const PortfolioHeadingLine = styled.div`
 export const ProjectsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 10rem 0;
 
   @media (max-width: ${breakpoints.md}) {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   @media (max-width: ${breakpoints.sm}) {
@@ -128,7 +119,7 @@ border: 0.1rem solid ${({ theme }) => theme.colors.accent};
   }
 
   @media (max-width: ${breakpoints.sm}) {
-    width: 100%; 
+    width: 80%; 
   }
 `;
 

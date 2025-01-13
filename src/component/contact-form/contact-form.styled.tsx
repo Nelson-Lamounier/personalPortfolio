@@ -7,27 +7,26 @@ export const ContactSection = styled.section`
   display: flex;
   align-items: center;
   padding: 5rem 10rem;
+ 
   background: linear-gradient(
     360deg,
     ${({ theme }) => theme.colors.backgroundPrimaryOpacity},
     ${({ theme }) => theme.colors.backgroundSecondaryOpacity}
   );
   z-index: 10;
-    @media (max-width: ${breakpoints.lg}) {
-      display: flex;
-  flex-direction: column;
+  @media (max-width: ${breakpoints.lg}) {
+    display: flex;
+    flex-direction: column;
   }
 `;
-
-
 
 export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 10;
-  width:100%;
-
+  width: 100%;
+   
 
   @media (max-width: ${breakpoints.lg}) {
     width: 80%;
@@ -38,7 +37,7 @@ export const ContactWrapper = styled.div`
   }
 
   @media (max-width: ${breakpoints.sm}) {
-    width: 90%;
+    width: 60%;
   }
 
   h1 {
@@ -50,8 +49,7 @@ export const ContactWrapper = styled.div`
   }
 `;
 export const ContactForm = styled.form`
-  width: 150rem; 
-  max-width: 60rem; 
+  width: 100%; 
   display: flex;
   flex-direction: column;
 
@@ -60,6 +58,7 @@ export const ContactForm = styled.form`
 
   input,
   textarea {
+  width: 80rem; 
     padding: 1.5rem;
     background-color: #444;
     color: ${({ theme }) => theme.colors.lightGray};;
@@ -70,16 +69,23 @@ export const ContactForm = styled.form`
     font-weight: 300;
     letter-spacing: 0.1rem;
 
-        @media (max-width: ${breakpoints.sm}) {
+        @media (max-width: ${breakpoints.xl}) {
       font-size: 1.4rem;
-      padding: 1rem;
+        width: 50rem; 
+    
     }
+
   }
 
   textarea {
-    max-width: 100%;
+
     max-height: 15rem;
     min-height: 5.5rem;
+            @media (max-width: ${breakpoints.sm}) {
+      font-size: 1.4rem;
+      padding: 1rem;
+      
+    }
   }
 
   input[type="submit"] {
