@@ -62,7 +62,7 @@ export const Logo = styled.div`
 // Navigation List
 export const NavList = styled.div`
   display: flex;
-  gap: 15rem;
+  gap: 10rem;
 
   @media (max-width: ${breakpoints.lg}) {
   

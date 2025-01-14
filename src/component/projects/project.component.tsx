@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import {FC, useEffect } from "react";
 import portfolioData from "../../data/portfolioData.json";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -20,8 +20,17 @@ import {
   StyleContainer,
 } from "./project.style";
 
+interface ProjectsProps {
+  excludeProjectIds?: number[]; // List of project IDs to exclude
+  sectionTitle?: string; // Dynamic section title
+  limit?: number; // Limit the number of projects displayed
+  onProjectClick?: (projectId: number) => void; // Callback for project clicks
+
+}
+
 // Define the type for a project
 interface Project {
+  id: number;
   title: string;
   name: string;
   technologies: string;
@@ -45,8 +54,24 @@ const cardVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const Projects: React.FC = () => {
+const Projects: FC<ProjectsProps> = ({   excludeProjectIds,
+  sectionTitle,
+  limit,
+  onProjectClick,}) => {
   const { projects, sectionHeading } = portfolioData;
+
+  // Filter projects based on props
+  let filteredProjects = projects;
+
+  if (excludeProjectIds && excludeProjectIds.length > 0) {
+    filteredProjects = filteredProjects.filter(
+      (project) => !excludeProjectIds.includes(project.id)
+    );
+  }
+
+  if (limit) {
+    filteredProjects = filteredProjects.slice(0, limit);
+  }
 
   // Animation controls
   const controls = useAnimation();
@@ -67,7 +92,7 @@ const Projects: React.FC = () => {
         <SectionHeading data-text={sectionHeading}>
           {sectionHeading}
         </SectionHeading>
-        <SectionHeadingLine />
+        <SectionHeadingLine/>
         {/* Attach ref to observe the ProjectsWrapper */}
         <motion.div
           ref={ref}
@@ -76,12 +101,13 @@ const Projects: React.FC = () => {
           variants={containerVariants}
         >
           <ProjectsWrapper className="center">
-            {projects.map((project, index) => (
+            {filteredProjects.map((project) => (
               <motion.div
-                key={index}
+                key={project.id}
                 variants={cardVariants}
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                onClick={() => onProjectClick && onProjectClick(project.id)}
               >
                 <Project>
                   <ProjectText>

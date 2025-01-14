@@ -32,7 +32,7 @@ const Header: FC = () => {
             }}
           />
         </SubHeading>
-        <HeroButton>{buttonText}</HeroButton>
+        <HeroButton href="#portfolio">{buttonText}</HeroButton>
       </Banner>
 
       <PersonImg src={personImage.src} alt={personImage.alt} />

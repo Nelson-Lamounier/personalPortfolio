@@ -4,6 +4,7 @@ import contactInfoData from "../../../data/contactInfoData.json";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+
 import * as Icons from "react-icons/fa6";
 
 type IconKey = keyof typeof Icons;
@@ -28,6 +29,7 @@ import {
   ProjectLink,
   ContactName,
   ContactText,
+  StyledMotionDiv,
 } from "./contact-info.styled";
 
 const ContactInfo: FC = () => {
@@ -64,17 +66,17 @@ const ContactInfo: FC = () => {
     <>
       <ContactInfoContainer>
         <SectionHeading>Contact Info</SectionHeading>
-        <ContactWrapper className="center">
-          <motion.div
+          <StyledMotionDiv
             ref={ref}
             initial="hidden"
             animate={controls}
             variants={containerVariants}
           >
+        <ContactWrapper className="center">
             {contactDetails.map((info, index) => {
               const IconComponent = Icons[info.icon]; // Dynamically resolve the icon component
               return (
-                <motion.div key={index} variants={itemVariants} >
+                <StyledMotionDiv key={index} variants={itemVariants} >
                   <InfoContainer key={index}>
                     <ContactText>
                       <ContactName>{info.title}</ContactName>
@@ -85,11 +87,11 @@ const ContactInfo: FC = () => {
                       <ProjectLink key={itemIndex}>{item}</ProjectLink>
                     ))}
                   </InfoContainer>
-                </motion.div>
+                </StyledMotionDiv>
               );
             })}
-          </motion.div>
         </ContactWrapper>
+          </StyledMotionDiv>
       </ContactInfoContainer>
     </>
   );

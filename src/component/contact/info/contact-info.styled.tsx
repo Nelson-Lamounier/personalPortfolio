@@ -1,18 +1,16 @@
 import styled from "styled-components";
+import { motion, useAnimation } from "framer-motion";
 
 import { breakpoints } from "@/component/commun-styled/constants";
 
 export const ContactInfoContainer = styled.section`
-
+ position: relative; 
   width: 100%;
   z-index: 10;
   background-color: ${({ theme }) => theme.colors.backgroundPrimary};
   padding: 10rem 2rem;
 
-
   color: ${({ theme }) => theme.colors.accent};
-
-
 
   @media (max-width: ${breakpoints.md}) {
     padding: 4rem 1.5rem;
@@ -25,14 +23,12 @@ export const ContactInfoContainer = styled.section`
 
 export const ContactWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 
-
-    @media (max-width: ${breakpoints.lg}) {
+  @media (max-width: ${breakpoints.lg}) {
     display: flex;
-    flex-direction: row;
-    align-items: center;
 
+    align-items: center;
   }
 
   @media (max-width: ${breakpoints.md}) {
@@ -53,8 +49,6 @@ export const InfoContainer = styled.div`
   overflow: hidden;
   transition: box-shadow 0.5s;
   border: 0.1rem solid rgb(6, 208, 1);
-
-
 `;
 
 export const ContactText = styled.div`
@@ -112,4 +106,11 @@ export const SectionHeading = styled.h1`
   @media (max-width: ${breakpoints.sm}) {
     font-size: 3rem;
   }
+`;
+
+export const StyledMotionDiv = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 `;

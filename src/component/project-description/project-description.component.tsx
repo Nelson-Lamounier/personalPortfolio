@@ -4,9 +4,10 @@ import { FaGithub } from "react-icons/fa";
 
 import videoDataInfo from "../../data/videoData.json";
 import ProjectDetails from "../project-details/project-detail.component";
+import Projects from "../projects/project.component";
 
 
-import Carousel from "../carousel/carousel.component";
+
 import {
   SectionHeading,
   SectionHeadingLine,
@@ -21,13 +22,18 @@ import {
 } from "./project-description.styled";
 
 
+
+
 const ProjectDecription: FC = () => {
-  const { id } = useParams();
-  const video = videoDataInfo.videos.find((video) => video.id == parseInt(id!));
+  const { id } = useParams<{ id: string }>();
+  const projectId = parseInt(id!, 10); // Convert string id to number
+
+  const video = videoDataInfo.videos.find((video) => video.id === projectId);
 
   if (!video) {
     return <h2>Project details not found!</h2>;
   }
+
   return (
     <>
       <ProjectDescriptionContainer id="project-description">
@@ -38,11 +44,8 @@ const ProjectDecription: FC = () => {
             </SectionHeading>
        
             <SubButton>
-            <DemoButton>Demo</DemoButton>
-            <DemoButton
-              onClick={() =>
-                window.open("https://github.com/your-repo", "_blank")
-              } // Add your GitHub repo URL
+            <DemoButton href={video.Demo}>Demo</DemoButton>
+            <DemoButton href={video.Repository}
             >
               <FaGithub style={{ marginRight: "10px" }} />
               Code Repository
@@ -50,13 +53,11 @@ const ProjectDecription: FC = () => {
           </SubButton>
         </HeroContainer>
           <VideoPlayer src={video.Link} />
-
-
-
       </ProjectDescriptionContainer>
       
       <ProjectDetails video={video}  />
-      <Carousel />
+      <Projects excludeProjectIds={[projectId]} sectionTitle="Other Projects" />
+    
     </>
   );
 };

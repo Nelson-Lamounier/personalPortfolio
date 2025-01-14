@@ -4,8 +4,6 @@ import AboutMe from "../../component/about-me/about-me.component";
 import Projects from "../../component/projects/project.component";
 import ContactForm from "../../component/contact-form/contact-form.component";
 
-import Footer from "../../component/footer/footer.component";
-
 
 import { HomeContainer,  } from "./home.style";
 
@@ -23,7 +21,6 @@ const Home = () => {
       <Resume />
       <ContactForm />
       <ContactInfo />
-      <Footer />
     </HomeContainer>
   );
 };

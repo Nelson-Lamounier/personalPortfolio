@@ -36,9 +36,9 @@
         "SSL Security",
         "API Integration"
       ],
-      "Link": "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/potfolio-videos/MagicRainbow.mp4",
+      "Link": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/projects-preview/videos/magic-rainbow.mp4",
       "Demo": "www.link.com",
-      "Repository": "gitlab.com"
+      "Repository": "https://github.com/Nelson-Lamounier/magic-rainbow"
     },
     {
       "id": 2,
@@ -76,8 +76,8 @@
         "SSL Security",
         "API Integration"
       ],
-      "Link": "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/potfolio-videos/verticalPrinting.mp4",
-      "Demo": "https://art-wall-vertical-printing.netlify.app",
+      "Link": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/projects-preview/videos/artwall.mp4",
+      "Demo": "https://art-wall-vertical-printing.netlify.app/",
       "Repository": "https://github.com/Nelson-Lamounier/artwall"
     },
     {
@@ -116,9 +116,9 @@
         "SSL Security",
         "API Integration"
       ],
-      "Link": "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/potfolio-videos/udemyProject.mp4",
+      "Link": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/projects-preview/videos/ecommerce.mp4",
       "Demo": "www.link.com",
-      "Repository": "gitlab.com"
+      "Repository": "https://github.com/Nelson-Lamounier/e-commerce-gymbs"
     },
     {
       "id": 4,
@@ -156,7 +156,7 @@
         "SSL Security",
         "API Integration"
       ],
-      "Link": "https://portfolio-nelson-lamounier.s3.eu-west-1.amazonaws.com/portfolio-website/potfolio-videos/gymBS-Ecommerce.mp4",
+      "Link": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/projects-preview/videos/porfolio.mp4",
       "Demo": "www.link.com",
       "Repository": "gitlab.com"
     }

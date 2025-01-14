@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 import { breakpoints, fonts } from "./constants.ts";
+import { Link } from "react-router-dom";
 
 // Keyframes for fade-in animation
 const fadeAnimation = keyframes`
@@ -121,7 +122,7 @@ export const BannerButton = styled.button`
   }
 `;
 
-export const HeroButton = styled.button`
+export const HeroButton = styled.a`
   font-size: 1.8rem;
   margin-top: 2rem;
   padding: 0.5rem 2rem;
