@@ -18,8 +18,9 @@ Welcome to my **Personal Portfolio Website**, a fully responsive and interactive
 | **Frontend**   | React, TypeScript                |
 | **Styling**    | TailwindCSS               |
 | **Animations** | Frame Motion |
-| **Hosting**    | Netlify           |
-| **Contact Form** | Netlify Function, AWS SES             |
+| **Hosting**    | Netlify                           |
+| **Serverless Functions** | Netlify Functions       |
+| **Email Service** | AWS SES                        |
 
 ---
 
@@ -34,14 +35,13 @@ Welcome to my **Personal Portfolio Website**, a fully responsive and interactive
 
 ---
 
-## 🚀 Deployment  
+## 🚀 Hosting & Deployment  
 
-This portfolio is hosted on **AWS** for high availability and performance:  
+The portfolio is **hosted on Netlify**, leveraging **Netlify Functions** for backend logic and **AWS SES** for email notifications.
 
-- **S3**: Static file hosting.  
-- **CloudFront**: Global CDN for fast content delivery.  
-- **AWS Lambda**: Backend function for handling form submissions.  
-- **AWS SES**: Email notifications for contact form messages.  
+- **Netlify**: Handles static site hosting with CI/CD for automated deployments.  
+- **Netlify Functions**: Serverless functions process contact form submissions.  
+- **AWS SES (Simple Email Service)**: Sends email notifications when users submit the contact form.  
 
 ---
 

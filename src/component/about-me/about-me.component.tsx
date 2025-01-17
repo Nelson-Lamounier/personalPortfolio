@@ -20,6 +20,9 @@ import {
 const AboutMe: FC = () => {
   const { description, profile, title } = aboutMeData;
 
+  const resumeUrl =
+  "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/resume/developer/Nelson+Lamounier+Leao-Resume.pdf"; // Replace with actual URL
+
   return (
     <AboutMeContainer id="about-me">
       <SectionHeading data-text={title}>{title}</SectionHeading>
@@ -31,7 +34,7 @@ const AboutMe: FC = () => {
               {profile.role}
             </AboutMeDescriptionSubHeading>
             <AboutMeDescription>{description}</AboutMeDescription>
-            <HeroButton>{profile.buttonText}</HeroButton>
+            <HeroButton href={resumeUrl} download="Nelson_Resume.pdf">{profile.buttonText}</HeroButton>
           </AboutMeDetails>
         </AboutMeCard>
       </ScrollSection>
