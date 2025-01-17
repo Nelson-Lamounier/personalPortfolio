@@ -20,7 +20,6 @@ import {
 } from "./about-me.style";
 
 const AboutMe: FC = () => {
-  const [resumeUrl, setResumeUrl] = useState("");
   const { description, profile, title } = aboutMeData;
 
   const fetchResumeUrl = async () => {
