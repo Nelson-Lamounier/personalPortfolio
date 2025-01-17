@@ -34,7 +34,6 @@ const Header: FC = () => {
         </SubHeading>
         <HeroButton href="#portfolio">{buttonText}</HeroButton>
       </Banner>
-
       <PersonImg src={personImage.src} alt={personImage.alt} />
     </HeaderContainer>
   );

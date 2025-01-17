@@ -55,7 +55,6 @@ const cardVariants = {
 };
 
 const Projects: FC<ProjectsProps> = ({   excludeProjectIds,
-  sectionTitle,
   limit,
   onProjectClick,}) => {
   const { projects, sectionHeading } = portfolioData;

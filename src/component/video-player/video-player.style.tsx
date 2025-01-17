@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import { breakpoints } from "../commun-styled/constants";
 
 export const Controls = styled.div`
   width: 100%;

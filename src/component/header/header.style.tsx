@@ -80,7 +80,7 @@ export const SubHeading = styled.h3`
   font-size: clamp(1.5rem, 2vw, 3rem); /* Scales between 1.5rem and 3rem */
   color: ${({ theme }) => theme.colors.lightGray};
   letter-spacing: 0.3rem;
-
+  margin-bottom: 5rem;
   max-width: 90%; /* Adjusts width dynamically */
 `;
 

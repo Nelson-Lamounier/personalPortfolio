@@ -1,7 +1,7 @@
 import { FC, useEffect } from "react";
 import contactInfoData from "../../../data/contactInfoData.json";
 
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 
@@ -90,7 +90,7 @@ const ContactInfo: FC = () => {
                 </StyledMotionDiv>
               );
             })}
-        </ContactWrapper>
+        </ContactWrapper>+
           </StyledMotionDiv>
       </ContactInfoContainer>
     </>

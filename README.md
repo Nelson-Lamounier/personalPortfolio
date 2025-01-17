@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# 🌟 Personal Portfolio Website  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my **Personal Portfolio Website**, a fully responsive and interactive platform showcasing my **professional experience, technical skills, and portfolio of projects**. Built with **React, TailwindCSS, and Frame Motion animations**, this website highlights my expertise in **web development and UI/UX design**.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Portfolio  
 
-## Expanding the ESLint configuration
+🚀 **Live Demo**: [My Portfolio Website](https://lamounierdigital.com) 
+📂 **GitHub Repository**: You are currently viewing the source code for my portfolio.  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Technologies Used  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+| Component       | Technologies                      |
+|----------------|----------------------------------|
+| **Frontend**   | React, TypeScript                |
+| **Styling**    | TailwindCSS               |
+| **Animations** | Frame Motion |
+| **Hosting**    | Netlify           |
+| **Contact Form** | Netlify Function, AWS SES             |
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 📌 Features  
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **🌍 About Me Section** – Showcases my professional background, skills, and career goals.  
+- **📂 Projects Gallery** – Displays my past work with descriptions and live demo links.  
+- **📩 Contact Form** – Allows potential employers and clients to reach out.  
+- **🎨 Dynamic Animations** – Smooth transitions and interactive effects with GSAP.  
+- **📄 Resume Download** – Enables visitors to download my resume.  
+- **📱 Fully Responsive** – Optimized for **desktop, tablet, and mobile**.  
+
+---
+
+## 🚀 Deployment  
+
+This portfolio is hosted on **AWS** for high availability and performance:  
+
+- **S3**: Static file hosting.  
+- **CloudFront**: Global CDN for fast content delivery.  
+- **AWS Lambda**: Backend function for handling form submissions.  
+- **AWS SES**: Email notifications for contact form messages.  
+
+---
+
+## ⚠️ Usage Notes  
+
+> 🚀 **This repository is for demonstration purposes only.** It showcases the **code structure and technologies used** for my personal portfolio.  
+
+> **Testing or local setup is not required**, as the **live demo** is provided above.  
+
+If you’d like to discuss my work or request a walkthrough, **feel free to reach out!**  

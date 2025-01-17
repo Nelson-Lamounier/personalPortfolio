@@ -120,7 +120,6 @@ const Resume: React.FC = () => {
           <ResumeHeadingContainer key={index}>
             <ResumeMainHeading>
               <ResumeDescriptionText>{project.title}</ResumeDescriptionText>
-              <HeadingDate>{`${project.duration.fromDate} - ${project.duration.toDate}`}</HeadingDate>
             </ResumeMainHeading>
             <ResumeSubHeading>{project.subHeading}</ResumeSubHeading>
             <ResumeHeadingDescription>{project.description}</ResumeHeadingDescription>

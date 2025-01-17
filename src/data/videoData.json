@@ -37,7 +37,7 @@
         "API Integration"
       ],
       "Link": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/projects-preview/videos/magic-rainbow.mp4",
-      "Demo": "www.link.com",
+      "Demo": "https://magic-rainbow-app.netlify.app/",
       "Repository": "https://github.com/Nelson-Lamounier/magic-rainbow"
     },
     {
@@ -117,7 +117,7 @@
         "API Integration"
       ],
       "Link": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/projects-preview/videos/ecommerce.mp4",
-      "Demo": "www.link.com",
+      "Demo": "https://gymbs-ecommerceapp.netlify.app/",
       "Repository": "https://github.com/Nelson-Lamounier/e-commerce-gymbs"
     },
     {
@@ -157,8 +157,8 @@
         "API Integration"
       ],
       "Link": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/projects-preview/videos/porfolio.mp4",
-      "Demo": "www.link.com",
-      "Repository": "gitlab.com"
+      "Demo": "https://lamounierdigital.com",
+      "Repository": "https://github.com/Nelson-Lamounier/personalPortfolio"
     }
   ]
 }

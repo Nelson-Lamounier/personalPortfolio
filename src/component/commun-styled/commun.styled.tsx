@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 import { breakpoints, fonts } from "./constants.ts";
-import { Link } from "react-router-dom";
+
 
 // Keyframes for fade-in animation
 const fadeAnimation = keyframes`
@@ -83,7 +83,7 @@ export const BannerButton = styled.button`
   font-size: clamp(1.5rem, 2.5vw, 2rem); /* Scales font size dynamically */
   border-radius: 3rem;
   border: 0.1rem solid #9bec00;
-  cursor: pointer;
+  cursor: pointer;  
   opacity: 0;
   visibility: hidden;
   animation: ${fadeAnimation} 1s 2s forwards;

@@ -42,8 +42,6 @@ export const AboutMeCard = styled.div`
     align-items: center;
     padding: 0;
   }
-
-    
 `;
 
 export const AboutMeDetails = styled.div`
@@ -55,25 +53,20 @@ export const AboutMeDetails = styled.div`
 `;
 
 export const AboutMeDescription = styled.p`
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 200;
-
+  padding: 2rem 0;
   color: ${({ theme }) => theme.colors.lightGray};
 
   @media (max-width: ${breakpoints.sm}) {
     font-size: 1.5rem;
   }
-
 `;
 
 export const AboutMeDescriptionHeading = styled.h2`
   margin-bottom: 1rem;
   font-size: 4rem;
   font-weight: 500;
-
-
-
-
 `;
 
 export const AboutMeDescriptionSubHeading = styled.h3`
@@ -86,5 +79,4 @@ export const AboutMeDescriptionSubHeading = styled.h3`
   @media (max-width: ${breakpoints.md}) {
     font-size: 3rem;
   }
-
 `;
