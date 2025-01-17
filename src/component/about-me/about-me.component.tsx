@@ -1,4 +1,6 @@
-import { FC } from "react";
+import { FC, useState } from "react";
+
+import axios from "axios";
 import aboutMeData from "../../data/aboutMeData.json";
 
 import ScrollSection from "../motion/scroll.component";
@@ -18,10 +20,28 @@ import {
 } from "./about-me.style";
 
 const AboutMe: FC = () => {
+  const [resumeUrl, setResumeUrl] = useState("");
   const { description, profile, title } = aboutMeData;
 
-  const resumeUrl =
-  "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/resume/developer/Nelson+Lamounier+Leao-Resume.pdf"; // Replace with actual URL
+  const fetchResumeUrl = async () => {
+    try {
+      const response = await axios.get("/.netlify/functions/getResumeUrl");
+      const url = response.data.url;
+
+      // Fetch the file and force download
+      const res = await fetch(url);
+      const blob = await res.blob();
+      const link = document.createElement("a");
+      link.href = window.URL.createObjectURL(blob);
+      link.download = "Nelson_Lamounier_Leao_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error("Error fetching resume:", error);
+    }
+  };
+
 
   return (
     <AboutMeContainer id="about-me">
@@ -34,7 +54,7 @@ const AboutMe: FC = () => {
               {profile.role}
             </AboutMeDescriptionSubHeading>
             <AboutMeDescription>{description}</AboutMeDescription>
-            <HeroButton href={resumeUrl} download="Nelson_Resume.pdf">{profile.buttonText}</HeroButton>
+            <HeroButton onClick={fetchResumeUrl}>{profile.buttonText}</HeroButton>
           </AboutMeDetails>
         </AboutMeCard>
       </ScrollSection>
