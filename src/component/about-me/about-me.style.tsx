@@ -16,15 +16,13 @@ export const AboutMeContainer = styled.section`
   }
     @media (max-width: ${breakpoints.lg}) {
       display: flex;
-  flex-direction: column;
+      flex-direction: column;
   }
 
   @media (max-width: ${breakpoints.md}) 
     padding: 1rem 0.5rem;
-    height: 70vh;
-  
-    
   }
+
 
 `;
 
@@ -59,7 +57,7 @@ export const AboutMeDescription = styled.p`
   color: ${({ theme }) => theme.colors.lightGray};
 
   @media (max-width: ${breakpoints.sm}) {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 `;
 

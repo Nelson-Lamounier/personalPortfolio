@@ -32,6 +32,11 @@ export const ResumeContainer = styled.section`
   @media (max-width: ${breakpoints.md}) {
     padding: 1rem;
   }
+
+  @media (max-width: ${breakpoints.sm}) {
+    display: flex;
+    flex-direction: row;
+  }
 `;
 
 export const ResumeContent = styled.div`
@@ -53,6 +58,8 @@ export const ResumeContent = styled.div`
 export const ResumeCard = styled.div`
   display: flex;
   height: 60rem;
+
+
 `;
 
 export const ResumeBullets = styled.div`
@@ -69,6 +76,10 @@ export const ResumeBullets = styled.div`
   @media (max-width: ${breakpoints.md}) {
     width: 50%;
     box-shadow: none;
+  }
+  @media (max-width: ${breakpoints.sm}) {
+   display: flex;
+    flex-direction: row;
   }
 `;
 

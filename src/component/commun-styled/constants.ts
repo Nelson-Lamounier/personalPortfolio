@@ -3,7 +3,7 @@ export const breakpoints = {
     lg: "1024px",
     md: "768px",
     sm: "640px",
-    xs: "355px",
+    xs: "440px",
   };
 
   export const theme = {

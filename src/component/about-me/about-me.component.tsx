@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 
 import axios from "axios";
 import aboutMeData from "../../data/aboutMeData.json";
@@ -26,13 +26,15 @@ const AboutMe: FC = () => {
     try {
       const response = await axios.get("/.netlify/functions/getResumeUrl");
       const url = response.data.url;
+      console.log("Response received:", response);
+      console.log(url)
 
       // Fetch the file and force download
       const res = await fetch(url);
       const blob = await res.blob();
       const link = document.createElement("a");
       link.href = window.URL.createObjectURL(blob);
-      link.download = "Nelson_Lamounier_Leao_Resume.pdf";
+      link.download = "Nelson_Resume.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

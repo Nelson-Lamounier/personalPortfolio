@@ -8,12 +8,13 @@ export async function handler() {
   try {
     const params = {
       Bucket: "freelance-portfolio-nelson",
-      Key: "resume/developer/Nelson Lamounier Leao-Resume.pdf", // ✅ Ensure correct path
+      Key: "resume/developer/Nelson-Resume.pdf", 
       Expires: 60, // Link expires in 60 seconds
-      ResponseContentDisposition: "attachment; filename=Nelson_Lamounier_Leao_Resume.pdf",
+      ResponseContentDisposition: "attachment; filename=Nelson_Resume.pdf",
     };
 
     const url = await s3.getSignedUrlPromise("getObject", params);
+    console.log("Generated Pre-Signed URL:", url); // Debugging
 
     return {
       statusCode: 200,
