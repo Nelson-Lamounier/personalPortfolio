@@ -20,14 +20,14 @@ import {
 } from "./about-me.style";
 
 const AboutMe: FC = () => {
-  const { description, profile, title } = aboutMeData;
+  const {  profile, title } = aboutMeData;
 
   const fetchResumeUrl = async () => {
     try {
       const response = await axios.get("/.netlify/functions/getResumeUrl");
       const url = response.data.url;
       console.log("Response received:", response);
-      console.log(url)
+      console.log(url);
 
       // Fetch the file and force download
       const res = await fetch(url);
@@ -43,7 +43,6 @@ const AboutMe: FC = () => {
     }
   };
 
-
   return (
     <AboutMeContainer id="about-me">
       <SectionHeading data-text={title}>{title}</SectionHeading>
@@ -54,8 +53,12 @@ const AboutMe: FC = () => {
             <AboutMeDescriptionSubHeading>
               {profile.role}
             </AboutMeDescriptionSubHeading>
-            <AboutMeDescription>{description}</AboutMeDescription>
-            <HeroButton onClick={fetchResumeUrl}>{profile.buttonText}</HeroButton>
+            {aboutMeData.description.map((para, index) => (
+              <AboutMeDescription key={index}> {para}</AboutMeDescription>
+            ))}
+            <HeroButton onClick={fetchResumeUrl}>
+              {profile.buttonText}
+            </HeroButton>
           </AboutMeDetails>
         </AboutMeCard>
       </ScrollSection>

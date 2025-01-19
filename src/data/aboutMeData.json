@@ -1,6 +1,10 @@
 {
   "title": "About Me",
-  "description": "Full Stack Developer and Web Designer based in Dublin, Ireland, with a background in Computer Science and a Bachelor’s Degree in Digital Marketing. My expertise lies in developing and maintaining responsive, user-friendly interfaces using technologies like React. My professional experience includes roles at AWS and Meta, where I specialized in technical customer support, troubleshooting complex issues, and delivering effective solutions to global clients. As a freelancer, I have completed numerous projects focused on creating scalable, high-performing web applications.",
+  "description":  [
+    "Over the past year, I’ve enhanced my expertise in fullstack development, cloud computing, and modern web technologies, creating scalable and user-friendly applications that drive tangible results for businesses. My background combines a Higher Diploma in Computer Science with a Bachelor’s Degree in Digital Marketing, giving me a unique edge in understanding both the technical and strategic aspects of web development.",
+    "I’ve held professional roles at AWS and Meta, where I refined my problem-solving and troubleshooting abilities by providing technical customer support and delivering effective solutions for global clients. In my freelance work, I’ve completed numerous projects focused on building responsive, high-performing web applications, ensuring optimal user experience and SEO best practices."
+    
+  ],
   "highlights": {
     "bullets": [
       "React and React Native",
@@ -11,7 +15,7 @@
   },
   "profile": {
     "name": "Nelson",
-    "role": "Full stack developer",
+    "role": "Full Stack Developer and Web Designer",
     "buttonText": "Download CV ↓"
   }
 }

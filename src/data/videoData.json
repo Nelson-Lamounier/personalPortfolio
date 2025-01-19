@@ -2,8 +2,8 @@
   "videos": [
     {
       "id": 1,
-      "projectName": "Magic Rainbow/ Website",
-      "projectOverview": "This project involved developing a website for Magic Rainbow Painting and Decorating, a painting and decorating service company based in Ireland, to strengthen their online presence and streamline customer interactions.",
+      "projectName": "Magic Rainbow",
+      "projectOverview": "This project involved developing a new website for Magic Rainbow Painting and Decorating, an Ireland-based painting and decorating service, to boost their online presence and streamline customer interactions. ",
       "keyTechnicalAchievements": {
         "frontend": [
           "Engaging home page",
@@ -21,14 +21,14 @@
         ]
       },
       "skillsDemonstrated": [
-        "Frontend development with React",
+        "NextJs",
         "Cloud service integration (AWS)",
         "Database management (MongoDB)",
-        "API development",
+        "TailwindCSS",
         "User experience (UX) design",
         "Digital marketing principles"
       ],
-      "projectOutcome": "The redesigned website resulted in a more responsive and user-friendly interface, improving navigation and accessibility across devices. The integration of a streamlined contact form enabled clients to request quotes easily, leading to a measurable increase in inquiries and bookings. Optimized for search engines, the site also drove increased traffic from social media and organic search, directly contributing to higher customer engagement and revenue growth.",
+      "projectOutcome": "The redesign produced a responsive, user friendly interface, enhancing navigation and accessibility across devices. By integrating a streamlined contact form, clients could request quotes easily, which led to a measurable increase in inquiries and bookings. With SEO optimization, the website also attracted more traffic from social media and organic search, ultimately driving higher customer engagement and revenue growth.",
       "technologiesUsed": [
         "React",
         "AWS (Lambda, Hosting)",
@@ -43,7 +43,7 @@
     {
       "id": 2,
       "projectName": "Art Wall Website",
-      "projectOverview": "This project involved creating a website for Art Wall Ireland, a company specializing in Vertical Printing, to showcase their work and expand their reach to a wider audience.",
+      "projectOverview": "This project involved creating a website for Art Wall Ireland, a company specialising in Vertical Printing, to showcase their work and expand their reach to a wider audience.",
       "keyTechnicalAchievements": {
         "frontend": [
           "Engaging home page",
@@ -61,14 +61,14 @@
         ]
       },
       "skillsDemonstrated": [
-        "Frontend development with React",
+        "HTML",
+        "CSS",
+        "JavaScript",
         "Cloud service integration (AWS)",
-        "Database management (MongoDB)",
-        "API development",
         "User experience (UX) design",
         "Digital marketing principles"
       ],
-      "projectOutcome": "Designed with a clean, visually appealing layout to highlight the company’s portfolio of unique wall printed designs. The addition of an easy-to-use inquiry form simplified the process for customers to request custom designs or learn more about available products. Through SEO optimization and the integration of engaging visuals, the website significantly improved the company’s online visibility. The project successfully positioned Art Wall Ireland as a go-to destination for artistic wall solutions while driving increased customer inquiries and interest.",
+      "projectOutcome": "Designed with a clean, visually appealing layout, the site highlights the company’s unique wall prints, while an intuitive inquiry form streamlines custom requests and product inquiries. Through SEO optimization and engaging visuals, the site significantly boosted the company’s online visibility, positioning Art Wall Ireland as a leading destination for artistic wall solutions. This increased brand awareness and customer interest, ultimately driving more inquiries and business opportunities.",
       "technologiesUsed": [
         "React",
         "AWS (Lambda, Hosting)",
@@ -83,7 +83,7 @@
     {
       "id": 3,
       "projectName": "E-commerce Website",
-      "projectOverview": "This project involved designing and developing a mocked e-commerce website for GymBs, a fictional fitness apparel and accessories brand, to serve as a proof-of-concept for modern e-commerce solutions.",
+      "projectOverview": "This project involved designing and developing a fictional e-commerce platform for GymBs, a fitness apparel and accessories brand, to demonstrate modern online shopping capabilities. Built with a dynamic, responsive layout, the site caters to fitness-conscious audiences and features a comprehensive product catalog with search and filtering options that streamline navigation.",
       "keyTechnicalAchievements": {
         "frontend": [
           "Engaging home page",
@@ -108,7 +108,7 @@
         "User experience (UX) design",
         "Digital marketing principles"
       ],
-      "projectOutcome": "The website featured a dynamic, responsive layout tailored to an active and fitness-conscious audience. A comprehensive product catalog was created, complete with filtering and search functionalities to enhance user experience. A mock checkout system was implemented to demonstrate a seamless purchasing process, complete with secure payment simulation. Focused on performance and user-centric design, this project showcased my ability to create scalable, visually engaging e-commerce platforms. By incorporating best practices in UI/UX design, the website provided a professional and intuitive shopping experience, illustrating the potential for future real-world applications.",
+      "projectOutcome": "A mock checkout system was implemented to showcase a seamless purchasing experience, complete with secure payment simulation. By focusing on performance, UI/UX best practices, and scalability, this project highlights my ability to create visually engaging and user-friendly e-commerce solutions. Its professional and intuitive design further demonstrates the potential for real-world applications that enhance customer satisfaction and business growth.",
       "technologiesUsed": [
         "React",
         "AWS (Lambda, Hosting)",

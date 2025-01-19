@@ -2,26 +2,26 @@
   "sectionHeading": "Portfolio",
   "projects": [
     {"id": 1,
-      "name": "Frontend Developer",
-      "technologies": "HTML / CSS / JS",
+      "name": "Fullstack Website",
+      "technologies": "NextJs / MongoDB / TailwindCss",
       "image": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/portfolio-hero-images/portfolio-1.png",
       "to": "/project/1"
     },
     {"id": 2,
-      "name": "Frontend Developer",
-      "technologies": "React / Firebase",
+      "name": "Frontend Website",
+      "technologies": "HTML / CSS / JavaScript",
       "image": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/portfolio-hero-images/portfolio-02.png",
       "to": "/project/2"
     },
     {"id": 3,
-      "name": "Full Stack Development",
+      "name": "Fullstack ecommerce",
       "technologies": "React / NodeJs / Typescript",
       "image": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/projects-preview/ecommerce-preview.png",
       "to": "/project/3"
     },
     {"id": 4,
-      "name": "Full Stack Development",
-      "technologies": "React / NodeJs / Typescript",
+      "name": "Fullstack portfolio",
+      "technologies": "React / AWS / Typescript",
       "image": "https://freelance-portfolio-nelson.s3.eu-west-1.amazonaws.com/projects-preview/portfolio-preview.png",
       "to": "/project/4"
     }

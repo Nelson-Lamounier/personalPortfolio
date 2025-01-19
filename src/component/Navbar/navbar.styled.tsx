@@ -41,10 +41,10 @@ export const NavBar = styled.nav`
 
 export const Logo = styled.div`
   position: absolute;
-  top: 25%;
+  top: 35%;
   left: 10%;
   img {
-    height: 8rem;
+    height: 5rem;
     width: auto;
 
       @media (max-width: ${breakpoints.lg}) {
