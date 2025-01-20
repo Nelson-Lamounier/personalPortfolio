@@ -1,7 +1,13 @@
 import React, { useState, CSSProperties } from "react";
-import resumeData from "../../data/resumeData.json"
+import resumeData from "../../data/resumeData.json";
 
-import { FaGraduationCap, FaBriefcase, FaCode, FaTasks, FaLanguage } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaBriefcase,
+  FaCode,
+  FaTasks,
+  FaLanguage,
+} from "react-icons/fa";
 
 import ScrollSection from "../motion/scroll.component";
 
@@ -47,17 +53,22 @@ const iconMapping = {
 
 const Resume: React.FC = () => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState<number>(0);
-  const [carousalOffsetStyle, setCarousalOffsetStyle] = useState<CSSProperties>({});
+  const [carousalOffsetStyle, setCarousalOffsetStyle] = useState<CSSProperties>(
+    {}
+  );
 
   const handleCarousal = (index: number) => {
     const offsetHeight = 600; // Adjust height as needed
-    setCarousalOffsetStyle({ transform: `translateY(-${index * offsetHeight}px)` });
+    setCarousalOffsetStyle({
+      transform: `translateY(-${index * offsetHeight}px)`,
+    });
     setSelectedBulletIndex(index);
   };
 
   const getBullets = () => {
     return resumeData.bullets.map((bullet, index) => {
-      const IconComponent = iconMapping[bullet.icon as keyof typeof iconMapping];
+      const IconComponent =
+        iconMapping[bullet.icon as keyof typeof iconMapping];
       return (
         <Bullet
           key={index}
@@ -84,7 +95,7 @@ const Resume: React.FC = () => {
             <ResumeSubHeading>{edu.subHeading}</ResumeSubHeading>
           </ResumeHeadingContainer>
         ))}
-      </ResumeScreenContainer >,
+      </ResumeScreenContainer>,
 
       /* Work History */
       <ResumeScreenContainer key="work-history">
@@ -100,10 +111,10 @@ const Resume: React.FC = () => {
             ))}
           </ResumeHeadingContainer>
         ))}
-      </ResumeScreenContainer >,
+      </ResumeScreenContainer>,
 
       /* Skills */
-      <ResumeScreenContainer  key="skills">
+      <ResumeScreenContainer key="skills">
         {resumeData.skills.map((skill, index) => (
           <SkillParent key={index}>
             <SkillLabel>{skill.skill}</SkillLabel>
@@ -112,57 +123,67 @@ const Resume: React.FC = () => {
             </SkillPercentageContainer>
           </SkillParent>
         ))}
-      </ResumeScreenContainer >,
+      </ResumeScreenContainer>,
 
       /* Projects */
-      <ResumeScreenContainer  key="projects">
+      <ResumeScreenContainer key="projects">
         {resumeData.projects.map((project, index) => (
           <ResumeHeadingContainer key={index}>
             <ResumeMainHeading>
               <ResumeDescriptionText>{project.title}</ResumeDescriptionText>
             </ResumeMainHeading>
             <ResumeSubHeading>{project.subHeading}</ResumeSubHeading>
-            <ResumeHeadingDescription>{project.description}</ResumeHeadingDescription>
+            <ResumeHeadingDescription>
+              {project.description}
+            </ResumeHeadingDescription>
           </ResumeHeadingContainer>
         ))}
-      </ResumeScreenContainer >,
+      </ResumeScreenContainer>,
 
-      /* Interests */
-      <ResumeScreenContainer  key="languages">
+      /* Languages */
+      <ResumeScreenContainer key="languages">
         {resumeData.languages.map((language, index) => (
           <ResumeHeadingContainer key={index}>
             <ResumeMainHeading>
-              <ResumeDescriptionText>{language.heading}</ResumeDescriptionText>
+              <ResumeDescriptionText style={{ color: " rgb(6, 208, 1)" }}>
+                {language.heading}
+              </ResumeDescriptionText>
             </ResumeMainHeading>
-            <ResumeHeadingDescription>{language.description}</ResumeHeadingDescription>
+            <ResumeHeadingDescription>
+              {language.description}
+            </ResumeHeadingDescription>
           </ResumeHeadingContainer>
         ))}
-      </ResumeScreenContainer >,
+      </ResumeScreenContainer>,
     ];
 
-    return <ResumeDetailsCarousal style={carousalOffsetStyle}>{screens}</ResumeDetailsCarousal>;
+    return (
+      <ResumeDetailsCarousal style={carousalOffsetStyle}>
+        {screens}
+      </ResumeDetailsCarousal>
+    );
   };
 
   return (
     <>
-    <ResumeContainer id="resume">
-      <ResumeContent>
-        <SectionHeading data-text="Resume">Resume</SectionHeading>
-        <SectionHeadingLine></SectionHeadingLine>
-        <ScrollSection> 
-        <ResumeCard>
-          <ResumeBullets>
-            <BulletContainer>
-            <BulletIcons/>
-              <Bullets>{getBullets()}</Bullets>
-            </BulletContainer>
-          </ResumeBullets>
-          <ResumeBulletDetails>{getResumeScreens()}</ResumeBulletDetails>
-        </ResumeCard>
-        </ScrollSection>
-      </ResumeContent>
-    </ResumeContainer>
-    <StyleContainer/>
+      <ResumeContainer id="resume">
+        <ResumeContent>
+          <SectionHeading data-text="Resume">Resume</SectionHeading>
+          <SectionHeadingLine></SectionHeadingLine>
+          <ScrollSection>
+            <ResumeCard>
+              <ResumeBullets>
+                <BulletContainer>
+                  <BulletIcons />
+                  <Bullets>{getBullets()}</Bullets>
+                </BulletContainer>
+              </ResumeBullets>
+              <ResumeBulletDetails>{getResumeScreens()}</ResumeBulletDetails>
+            </ResumeCard>
+          </ScrollSection>
+        </ResumeContent>
+      </ResumeContainer>
+      <StyleContainer />
     </>
   );
 };
