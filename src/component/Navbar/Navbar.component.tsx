@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, FC } from "react";
 import { useLocation, Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import { NavbarContainer, Logo, NavList, NavBar,  MobileMenuIcon, 
   MobileNavMenu  } from "./navbar.styled";
 
@@ -8,15 +9,17 @@ import { NavbarContainer, Logo, NavList, NavBar,  MobileMenuIcon,
 import navbarData from "../../data/navbarData.json";
 
 
-const Navbar: React.FC = () => {
+const Navbar: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
   const location = useLocation(); // Get current route
   const { logo, links } = navbarData;
+  const isAbove640px = useMediaQuery({ minWidth: 640 });
 
     // Check if the user is on the project page
     const isProjectPage = location.pathname.startsWith("/project/");
+
 
     useEffect(() => {
       const onScroll = () => {
@@ -99,6 +102,7 @@ const Navbar: React.FC = () => {
             </Logo>
             <NavList>
               {links.map((link, index) => (
+                (isAbove640px || link.label !== "Resume") && (
                 <a
                   key={index}
                   href={link.href}
@@ -108,6 +112,7 @@ const Navbar: React.FC = () => {
                 >
                   {link.label}
                 </a>
+                    )
               ))}
             </NavList>
             <MobileMenuIcon onClick={toggleMenu}>

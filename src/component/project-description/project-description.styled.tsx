@@ -4,14 +4,13 @@ import { breakpoints } from "../commun-styled/constants.ts";
 
 export const ProjectDescriptionContainer = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 0 10rem 0 0;
   z-index: 10;
   background: linear-gradient(
     360deg,
@@ -20,9 +19,32 @@ export const ProjectDescriptionContainer = styled.section`
   );
 
   @media (max-width: ${breakpoints.lg}) {
-    flex-direction: column;
-    justify-content: center;
-    padding: 10rem 0 20rem 0;
+    align-items: center;
+    height: 70vh;
+  }
+`;
+
+export const ImgWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
   }
 `;
 
@@ -34,31 +56,25 @@ export const SectionHeading = styled.div`
 `;
 
 export const HeroContainer = styled.div`
-  width: 50%;
+  width: 60%;
   padding-left: 10%;
   text-align: left;
   z-index: 10;
 
-  @media (max-width: ${breakpoints.lg}) {
-    width: 60%;
-  }
-
-  @media (max-width: ${breakpoints.md}) {
+  @media (max-width: ${breakpoints.xl}) {
     width: 90%;
-    text-align: center;
-    padding-left: 0;
+  }
+  @media (max-width: ${breakpoints.lg}) {
+    width: 100%;
   }
 `;
 
 export const SubButton = styled.div`
-  position: absolute;
-  bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.backgroundPrimary};
   z-index: 10;
-
   @media (max-width: ${breakpoints.lg}) {
     flex-direction: row;
     left: 2rem;
@@ -69,7 +85,8 @@ export const DemoButton = styled.a.attrs({
   target: "_blank",
   rel: "noopener noreferrer",
 })`
-  width: 30rem;
+  text-align: center;
+  width: 50%;
   background-color: transparent;
   border-radius: 2.5rem;
   color: ${({ theme }) => theme.colors.buttonPrimary};
@@ -86,15 +103,18 @@ export const DemoButton = styled.a.attrs({
     border: 0.1rem solid ${({ theme }) => theme.colors.buttonSecundary};
   }
 
-  @media (max-width: 768px) {
-    width: 18rem;
-    height: 3.5rem;
-    font-size: 1.6rem;
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 1.5rem;
   }
+`;
 
-  @media (max-width: 480px) {
-    width: 15rem;
-    height: 3rem;
-    font-size: 1.4rem;
+export const ProjectSub = styled.p`
+  font-size: 2.5rem;
+  font-weight: 200;
+  padding: 2rem 0;
+  color: ${({ theme }) => theme.colors.lightGray};
+
+  @media (max-width: ${breakpoints.md}) {
+    font-size: 2rem;
   }
 `;

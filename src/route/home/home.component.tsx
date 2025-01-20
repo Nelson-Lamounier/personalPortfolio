@@ -1,4 +1,5 @@
 import Header from "../../component/header/header.component";
+import { useMediaQuery } from "react-responsive";
 
 import AboutMe from "../../component/about-me/about-me.component";
 import Projects from "../../component/projects/project.component";
@@ -13,12 +14,13 @@ import ContactInfo from "../../component/contact/info/contact-info.component";
 // Define the props type for the component
 
 const Home = () => {
+  const isAbove640px = useMediaQuery({ minWidth: 640 });
   return (
     <HomeContainer>
       <Header />
       <AboutMe />
       <Projects />
-      <Resume />
+      {isAbove640px && <Resume />}
       <ContactForm />
       <ContactInfo />
     </HomeContainer>

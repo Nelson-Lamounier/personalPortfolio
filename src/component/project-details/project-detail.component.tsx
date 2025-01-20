@@ -4,6 +4,11 @@ import {
   SkillsList,
   ParentComponent,
   AboutMeDescriptionSubHeading,
+  ContentWrapper,
+  Image,
+  MediaContainer,
+  Video,
+  ParagraphWrapper,
 } from "./project-detail.style.tsx";
 
 interface ProjectDetailsProps {
@@ -11,16 +16,38 @@ interface ProjectDetailsProps {
     projectOverview: string;
     projectOutcome: string;
     skillsDemonstrated: string[];
+    overviewImage: string;
+    Link: string;
   };
 }
 
 const ProjectDetails: FC<ProjectDetailsProps> = ({ video }) => {
   return (
     <ParentComponent>
-      <div>
-        <Paragraph>{video.projectOverview}</Paragraph>
+      <ContentWrapper>
+        <ParagraphWrapper>
+          <AboutMeDescriptionSubHeading>
+            The Project
+          </AboutMeDescriptionSubHeading>
+          <Paragraph>{video.projectOverview}</Paragraph>
+        </ParagraphWrapper>
+        <MediaContainer>
+        <Video key={video.Link} controls>
+    <source src={video.Link} type="video/mp4" />
+  </Video>
+        </MediaContainer>
+      </ContentWrapper>
+      <ContentWrapper>
+      <ParagraphWrapper>
+      <AboutMeDescriptionSubHeading>
+            The Pages
+          </AboutMeDescriptionSubHeading>
         <Paragraph>{video.projectOutcome}</Paragraph>
-      </div>
+        </ParagraphWrapper>
+        <MediaContainer>
+          <Image src={video.overviewImage} alt="Project Overview" />
+        </MediaContainer>
+      </ContentWrapper>
       <div>
         <AboutMeDescriptionSubHeading>
           Skills Demonstrated

@@ -24,6 +24,7 @@ export const AboutMeContainer = styled.section`
   }
 
 
+
 `;
 
 export const AboutMeCard = styled.div`
@@ -40,12 +41,26 @@ export const AboutMeCard = styled.div`
     align-items: center;
     padding: 0;
   }
+    
 `;
 
 export const AboutMeDetails = styled.div`
   text-align: justify;
 
   @media (max-width: ${breakpoints.sm}) {
+    padding: 0;
+  }
+`;
+
+export const ContentWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+          @media (max-width: ${breakpoints.xs}) 
     padding: 0;
   }
 `;
