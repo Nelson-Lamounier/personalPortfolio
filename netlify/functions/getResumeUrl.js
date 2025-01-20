@@ -1,6 +1,10 @@
 import AWS from "aws-sdk";
 
-AWS.config.update({ region: "eu-west-1" }); // ✅ Use your S3 region
+AWS.config.update({
+  accessKeyId: process.env.MY_AWS_ACCESS_KEY,
+  secretAccessKey: process.env.MY_AWS_SECRET_KEY,
+  region: process.env.MY_AWS_REGION || "eu-west-1",
+});
 
 const s3 = new AWS.S3();
 
