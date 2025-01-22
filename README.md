@@ -16,7 +16,7 @@ Welcome to my **Personal Portfolio Website**, a fully responsive and interactive
 | Component       | Technologies                      |
 |----------------|----------------------------------|
 | **Frontend**   | React, TypeScript                |
-| **Styling**    | TailwindCSS               |
+| **Styling**    | Styled CSS               |
 | **Animations** | Frame Motion |
 | **Hosting**    | Netlify                           |
 | **Serverless Functions** | Netlify Functions       |
