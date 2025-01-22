@@ -1,6 +1,6 @@
 # 🌟 Personal Portfolio Website  
 
-Welcome to my **Personal Portfolio Website**, a fully responsive and interactive platform showcasing my **professional experience, technical skills, and portfolio of projects**. Built with **React, TailwindCSS, and Frame Motion animations**, this website highlights my expertise in **web development and UI/UX design**.  
+Welcome to my **Personal Portfolio Website**, a fully responsive and interactive platform showcasing my **professional experience, technical skills, and portfolio of projects**. Built with **React, Styled CSS, and Frame Motion animations**, this website highlights my expertise in **web development and UI/UX design**.  
 
 ---
 
