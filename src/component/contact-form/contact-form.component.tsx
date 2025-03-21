@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post("https://cc5p6vcf35.execute-api.eu-west-1.amazonaws.com/prod/contact", formData, {
+      const response = await axios.post("https://9rqd7ylmf3.execute-api.eu-west-1.amazonaws.com/Prod/contact", formData, {
         headers: { "Content-Type": "application/json" },
       });
 

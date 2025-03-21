@@ -24,11 +24,11 @@ const AboutMe: FC = () => {
 
   const fetchResumeUrl = async () => {
     try {
-      const response = await axios.get("/.netlify/functions/getResumeUrl");
-      const url = response.data.url;
-      console.log("Response received:", response);
-      console.log(url);
+      const response = await axios.get("https://wn7zvmv3fg.execute-api.eu-west-1.amazonaws.com/prod/download");
 
+      const parsedBody = response.data.body ? JSON.parse(response.data.body) : response.data
+      const url = parsedBody.url;
+      
       // Fetch the file and force download
       const res = await fetch(url);
       const blob = await res.blob();
