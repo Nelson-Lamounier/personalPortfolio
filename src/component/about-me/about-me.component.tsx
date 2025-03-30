@@ -24,8 +24,7 @@ const AboutMe: FC = () => {
 
   const fetchResumeUrl = async () => {
     try {
-      const response = await axios.get("https://wn7zvmv3fg.execute-api.eu-west-1.amazonaws.com/prod/download");
-
+      const response = await axios.get("https://pmtj3js7z4.execute-api.eu-west-1.amazonaws.com/Prod/download");
       const parsedBody = response.data.body ? JSON.parse(response.data.body) : response.data
       const url = parsedBody.url;
       

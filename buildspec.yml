@@ -1,0 +1,32 @@
+version: 0.2
+
+env:
+  secrets-manager:
+    GITHUB_TOKEN: "/github/token"
+
+phases:
+  pre_build:
+    commands:
+      - echo $GITHUB_TOKEN
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazon.com
+      - REPOSITORY_URL=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/portfolio
+      - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+  
+  build:
+    commands:
+      - echo Builsing Docker Image...
+      - docker build -t $REPOSITORY_URI:$IMAGE_TAG .
+      - docker tag $REPOSITORY_URI:$IMAGE_TAG $REPOSITORY_URI:latest
+
+  post_build:
+    commands:
+      - echo Pushing to ECR...
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - docker push $REPOSITORY_URI:latest
+      - echo Writing imagefinitions.json...
+      - printf '[{"name":"app-container","imaheUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+
+artifacts:
+  files:
+    - imagedefinitions.json
