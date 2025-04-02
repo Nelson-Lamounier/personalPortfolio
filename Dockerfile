@@ -21,6 +21,8 @@ RUN yarn add @rollup/rollup-linux-arm64-musl
 # Build the React app
 RUN yarn build
 
+# Test commit comment
+
 # Stage 2: Serve the app with Nginx
 FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
