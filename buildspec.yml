@@ -3,8 +3,16 @@ version: 0.2
 env:
   parameter-store:
     GITHUB_TOKEN: "/github/token"
+    DOCKERHUB_USERNAME: "/dockerhub/username"
+    DOCKERHUB_PASSWORD: "/dockerhub/password"
 
 phases:
+  install:
+    runtime-versions:
+      docker: 18
+    commands:
+      - echo Logging in to Docker Hub...
+      - echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
   pre_build:
     commands:
       - echo $GITHUB_TOKEN
