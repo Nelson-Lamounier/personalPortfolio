@@ -8,8 +8,6 @@ import {
   Logo,
   NavList,
   NavBar,
-  MobileMenuIcon,
-  MobileNavMenu,
   NavButton,
 } from "./navbar.styled";
 
@@ -20,7 +18,6 @@ import navbarData from "../../data/navbarData.json";
 const Navbar: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("home");
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
   const location = useLocation(); // Get current route
   const navigate = useNavigate();
   const { logo, links } = navbarData;
@@ -57,12 +54,23 @@ const Navbar: FC = () => {
   }, []);
 
   const handleNavigation = (route: string, id: string) => {
-    setIsMenuOpen(false);
     navigate(route);
     setTimeout(() => {
       const section = document.getElementById(id);
       section?.scrollIntoView({ behavior: "smooth" });
     }, 100);
+  };
+
+  const handleLogoClick = () => {
+    if (location.pathname !== "/") {
+      navigate("/");
+    } else {
+      const homeSection = document.getElementById("home");
+      if (homeSection) {
+        homeSection.scrollIntoView({ behavior: "smooth" });
+      }
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
@@ -76,12 +84,20 @@ const Navbar: FC = () => {
         >
           {/* Minimal Navbar for Project Page */}
           <Logo>
-            <Link to="/">
+            <button
+              onClick={handleLogoClick}
+              style={{
+                background: "none",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+              }}
+            >
               <img
                 src={logo.src}
                 alt={logo.alt}
               />
-            </Link>
+            </button>
           </Logo>
           <NavList>
             <Link
@@ -99,12 +115,20 @@ const Navbar: FC = () => {
           }`}
         >
           <Logo>
-            <Link to="/">
+            <button
+              onClick={handleLogoClick}
+              style={{
+                background: "none",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+              }}
+            >
               <img
                 src={logo.src}
                 alt={logo.alt}
               />
-            </Link>
+            </button>
           </Logo>
           {!isProjectPage && (
             <NavList>

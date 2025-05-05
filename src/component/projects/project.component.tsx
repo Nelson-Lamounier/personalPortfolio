@@ -1,4 +1,6 @@
-import {FC, useEffect } from "react";
+/** @format */
+
+import { FC, useEffect } from "react";
 import portfolioData from "../../data/portfolioData.json";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -25,7 +27,6 @@ interface ProjectsProps {
   sectionTitle?: string; // Dynamic section title
   limit?: number; // Limit the number of projects displayed
   onProjectClick?: (projectId: number) => void; // Callback for project clicks
-
 }
 
 // Define the type for a project
@@ -54,9 +55,11 @@ const cardVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const Projects: FC<ProjectsProps> = ({   excludeProjectIds,
+const Projects: FC<ProjectsProps> = ({
+  excludeProjectIds,
   limit,
-  onProjectClick,}) => {
+  onProjectClick,
+}) => {
   const { projects, sectionHeading } = portfolioData;
 
   // Filter projects based on props
@@ -91,7 +94,7 @@ const Projects: FC<ProjectsProps> = ({   excludeProjectIds,
         <SectionHeading data-text={sectionHeading}>
           {sectionHeading}
         </SectionHeading>
-        <SectionHeadingLine/>
+        <SectionHeadingLine />
         {/* Attach ref to observe the ProjectsWrapper */}
         <motion.div
           ref={ref}
