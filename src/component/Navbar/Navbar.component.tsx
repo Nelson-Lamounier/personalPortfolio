@@ -17,7 +17,7 @@ import navbarData from "../../data/navbarData.json";
 
 const Navbar: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("home");
+  const [activeSection, setActiveSection] = useState<string>("");
   const location = useLocation(); // Get current route
   const navigate = useNavigate();
   const { logo, links } = navbarData;
@@ -35,30 +35,49 @@ const Navbar: FC = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Handle section highlight using IntersectionObserver
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: "-50% 0px -50% 0px" }
-    );
+    if (location.pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "-50% 0px -50% 0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+          break;
+        }
+      }
+    }, observerOptions);
 
     const sections = document.querySelectorAll("section");
     sections.forEach((section) => observer.observe(section));
 
-    return () => observer.disconnect(); // Clean up on component unmount
-  }, []);
+    return () => observer.disconnect();
+  }, [location.pathname]);
 
   const handleNavigation = (route: string, id: string) => {
-    navigate(route);
-    setTimeout(() => {
+    if (location.pathname !== route) {
+      navigate(route);
+      // Wait for navigation to finish before scrolling
+      setTimeout(() => {
+        const section = document.getElementById(id);
+        section?.scrollIntoView({ behavior: "smooth" });
+        setActiveSection(id); // manually set
+      }, 100);
+    } else {
+      // Already on the correct page
       const section = document.getElementById(id);
       section?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
+      setActiveSection(id); // manually set
+    }
   };
 
   const handleLogoClick = () => {
@@ -137,7 +156,7 @@ const Navbar: FC = () => {
                   (isAbove640px || link.label !== "Resume") && (
                     <NavButton
                       key={index}
-                      onClick={() => handleNavigation(link.route!, link.id)}
+                      onClick={() => handleNavigation(link.route, link.id)}
                       className={`nav-link ${
                         activeSection === link.id ? "active" : ""
                       }`}
