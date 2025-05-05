@@ -4,10 +4,10 @@
     "alt": "Nelson Lamounier Logo"
   },
   "links": [
-    { "href": "#home", "label": "Home" },
-    { "href": "#about-me", "label": "About" },
-    { "href": "#portfolio", "label": "Portfolio" },
-    { "href": "#resume", "label": "Resume" },
-    { "href": "#contact", "label": "Contact" }
+    { "route": "/home", "id": "home", "label": "Home" },
+    { "route": "/about", "id": "about-me", "label": "About" },
+    { "href": "/portfolio", "id": "portfolio", "label": "Portfolio" },
+    { "href": "/resume", "id": "resume", "label": "Resume" },
+    { "href": "/contact", "id": "contact", "label": "Contact" }
   ]
 }
