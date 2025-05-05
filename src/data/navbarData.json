@@ -6,8 +6,8 @@
   "links": [
     { "route": "/home", "id": "home", "label": "Home" },
     { "route": "/about", "id": "about-me", "label": "About" },
-    { "href": "/portfolio", "id": "portfolio", "label": "Portfolio" },
-    { "href": "/resume", "id": "resume", "label": "Resume" },
-    { "href": "/contact", "id": "contact", "label": "Contact" }
+    { "route": "/portfolio", "id": "portfolio", "label": "Portfolio" },
+    { "route": "/resume", "id": "resume", "label": "Resume" },
+    { "route": "/contact", "id": "contact", "label": "Contact" }
   ]
 }

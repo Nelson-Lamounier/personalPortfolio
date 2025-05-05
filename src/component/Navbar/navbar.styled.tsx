@@ -1,3 +1,5 @@
+/** @format */
+
 import styled from "styled-components";
 
 import { breakpoints } from "../commun-styled/constants";
@@ -26,7 +28,7 @@ export const NavBar = styled.nav`
 
   &.navbar-colored {
     background-color: #111111;
-    box-shadow:  0.1rem 0.5rem 0.5rem ${({ theme }) => theme.colors.accent};
+    box-shadow: 0.1rem 0.5rem 0.5rem ${({ theme }) => theme.colors.accent};
     color: #fff;
   }
   @media (max-width: ${breakpoints.lg}) {
@@ -35,8 +37,6 @@ export const NavBar = styled.nav`
   @media (max-width: ${breakpoints.md}) {
     padding: 2rem;
   }
-
-
 `;
 
 export const Logo = styled.div`
@@ -65,7 +65,6 @@ export const NavList = styled.div`
   gap: 10rem;
 
   @media (max-width: ${breakpoints.lg}) {
-  
     gap: 10rem;
   }
 
@@ -141,4 +140,15 @@ export const MobileNavMenu = styled.div<{ isOpen: boolean }>`
       font-weight: bold;
     }
   }
+`;
+
+export const NavButton = styled.button`
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
 `;

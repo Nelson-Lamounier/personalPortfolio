@@ -1,7 +1,7 @@
 /** @format */
 
 import { useEffect, useState, FC } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import {
   NavbarContainer,
@@ -10,6 +10,7 @@ import {
   NavBar,
   MobileMenuIcon,
   MobileNavMenu,
+  NavButton,
 } from "./navbar.styled";
 
 //Use the Intersection Observer API to detect when a section is in the viewport and dynamically update the active state of the corresponding nav link.
@@ -21,6 +22,7 @@ const Navbar: FC = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
   const location = useLocation(); // Get current route
+  const navigate = useNavigate();
   const { logo, links } = navbarData;
   const isAbove640px = useMediaQuery({ minWidth: 640 });
 
@@ -29,12 +31,7 @@ const Navbar: FC = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY === 0) {
-        setIsScrolled(false); // Reset `isScrolled` when at the top
-        setActiveSection("home");
-      } else if (window.scrollY > 399) {
-        setIsScrolled(true); // Set `isScrolled` when scrolling down
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", onScroll);
@@ -42,25 +39,16 @@ const Navbar: FC = () => {
   }, []);
 
   useEffect(() => {
-    const observerOptions = {
-      root: null, // Observe relative to the viewport
-      rootMargin: "-50% 0px -50% 0px",
-      threadId: 0.5, // Trigger when 60% of the section is visible
-    };
-    const observer = new IntersectionObserver((entries) => {
-      let currentActiveSection = "";
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          currentActiveSection = entry.target.id; // Update active section to the currently intersecting section
-        }
-      });
-
-      if (currentActiveSection) {
-        setActiveSection(currentActiveSection); // Set the active section if one is intersecting
-      } else if (window.scrollY === 0) {
-        setActiveSection(""); // If at the top of the page, set no active section
-      }
-    }, observerOptions);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-50% 0px -50% 0px" }
+    );
 
     const sections = document.querySelectorAll("section");
     sections.forEach((section) => observer.observe(section));
@@ -68,9 +56,13 @@ const Navbar: FC = () => {
     return () => observer.disconnect(); // Clean up on component unmount
   }, []);
 
-  // Toggle the mobile menu
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
+  const handleNavigation = (route: string, id: string) => {
+    setIsMenuOpen(false);
+    navigate(route);
+    setTimeout(() => {
+      const section = document.getElementById(id);
+      section?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   };
 
   return (
@@ -106,57 +98,33 @@ const Navbar: FC = () => {
             isScrolled ? "navbar-colored" : "navbar-transparent"
           }`}
         >
-          {/* Full Navbar for Other Pages */}
           <Logo>
-            <a href="#">
+            <Link to="/">
               <img
                 src={logo.src}
                 alt={logo.alt}
               />
-            </a>
+            </Link>
           </Logo>
-          <NavList>
-            {links.map(
-              (link, index) =>
-                (isAbove640px || link.label !== "Resume") && (
-                  <a
-                    key={index}
-                    href={link.href}
-                    className={`nav-link ${
-                      activeSection === link.href.slice(1) ? "active" : ""
-                    }`}
-                  >
-                    {link.label}
-                  </a>
-                )
-            )}
-          </NavList>
-          <MobileMenuIcon onClick={toggleMenu}>
-            {isMenuOpen ? (
-              <i className="fas fa-times"></i>
-            ) : (
-              <i className="fas fa-bars"></i>
-            )}
-          </MobileMenuIcon>
+          {!isProjectPage && (
+            <NavList>
+              {links.map(
+                (link, index) =>
+                  (isAbove640px || link.label !== "Resume") && (
+                    <NavButton
+                      key={index}
+                      onClick={() => handleNavigation(link.route!, link.id)}
+                      className={`nav-link ${
+                        activeSection === link.id ? "active" : ""
+                      }`}
+                    >
+                      {link.label}
+                    </NavButton>
+                  )
+              )}
+            </NavList>
+          )}
         </NavBar>
-      )}
-
-      {/* Mobile Navigation Menu */}
-      {!isProjectPage && (
-        <MobileNavMenu isOpen={isMenuOpen}>
-          {links.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              className={`nav-link ${
-                activeSection === link.href.slice(1) ? "active" : ""
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
-        </MobileNavMenu>
       )}
     </NavbarContainer>
   );
