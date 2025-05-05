@@ -7,7 +7,7 @@ import AboutMe from "../../component/about-me/about-me.component";
 import Projects from "../../component/projects/project.component";
 import ContactForm from "../../component/contact-form/contact-form.component";
 
-import { HomeContainer } from "./home.style";
+import { HomeContainer, Section } from "./home.style";
 
 import Resume from "../../component/resume/resume.component";
 import ContactInfo from "../../component/contact/info/contact-info.component";
@@ -18,24 +18,24 @@ const Home = () => {
   const isAbove640px = useMediaQuery({ minWidth: 640 });
   return (
     <HomeContainer>
-      <section id="home">
+      <Section id="home">
         <Header />
-      </section>
-      <section id="about-me">
+      </Section>
+      <Section id="about-me">
         <AboutMe />
-      </section>
-      <section id="portfolio">
+      </Section>
+      <Section id="portfolio">
         <Projects />
-      </section>
+      </Section>
       {isAbove640px && (
-        <section id="resume">
+        <Section id="resume">
           <Resume />
-        </section>
+        </Section>
       )}
-      <section id="contact">
+      <Section id="contact">
         <ContactForm />
         <ContactInfo />
-      </section>
+      </Section>
     </HomeContainer>
   );
 };

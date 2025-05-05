@@ -1,3 +1,5 @@
+/** @format */
+
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
@@ -20,4 +22,8 @@ export const HeaderWrapper = styled.div`
     height: 100%;
     z-index: -1; /* Behind Header */
   }
+`;
+
+export const Section = styled.section`
+  scroll-margin-top: 10rem; /* Match the height of your navbar */
 `;
