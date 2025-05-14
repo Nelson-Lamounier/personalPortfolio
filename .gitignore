@@ -23,8 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-# Ignore deployment infrastructure files
-infra/
+
+push-image-portfolio.sh
 
 # Local Netlify folder
 .netlify
