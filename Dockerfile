@@ -1,6 +1,6 @@
 # Stage 1:Build the React app
 
-FROM --platform=linux/amd64 node:lts-alpine AS build
+FROM node:lts-alpine AS build
 WORKDIR /app
 
 # Enable Corepack (required for Yarn 4+)
