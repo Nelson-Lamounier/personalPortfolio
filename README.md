@@ -1,54 +1,63 @@
-# 🌟 Personal Portfolio Website  
+<!-- @format -->
 
-Welcome to my **Personal Portfolio Website**, a fully responsive and interactive platform showcasing my **professional experience, technical skills, and portfolio of projects**. Built with **React, Styled CSS, and Frame Motion animations**, this website highlights my expertise in **web development and UI/UX design**.  
+# 💻 Personal Portfolio – Full Stack Application with AWS Infrastructure
 
----
-
-## 🔗 Live Portfolio  
-
-🚀 **Live Demo**: [My Portfolio Website](https://lamounierdigital.com) 
-📂 **GitHub Repository**: You are currently viewing the source code for my portfolio.  
+This is the repository for my personal portfolio website, a fully responsive and production-grade **React-based application** deployed entirely on **AWS**. The site showcases my **software engineering experience**, highlights technical projects, and demonstrates my proficiency in **cloud-native application development**, **infrastructure as code**, and **modern DevOps workflows**.
 
 ---
 
-## 🛠️ Technologies Used  
+## 🔗 Live Portfolio
 
-| Component       | Technologies                      |
-|----------------|----------------------------------|
-| **Frontend**   | React, TypeScript                |
-| **Styling**    | Styled CSS               |
-| **Animations** | Frame Motion |
-| **Hosting**    | Netlify                           |
-| **Serverless Functions** | Netlify Functions       |
-| **Email Service** | AWS SES                        |
+🌍 **Live Site**: [https://lamounierdigital.com](https://lamounierdigital.com)
 
 ---
 
-## 📌 Features  
+## 🧰 Tech Stack Overview
 
-- **🌍 About Me Section** – Showcases my professional background, skills, and career goals.  
-- **📂 Projects Gallery** – Displays my past work with descriptions and live demo links.  
-- **📩 Contact Form** – Allows potential employers and clients to reach out.  
-- **🎨 Dynamic Animations** – Smooth transitions and interactive effects with GSAP.  
-- **📄 Resume Download** – Enables visitors to download my resume.  
-- **📱 Fully Responsive** – Optimized for **desktop, tablet, and mobile**.  
-
----
-
-## 🚀 Hosting & Deployment  
-
-The portfolio is **hosted on Netlify**, leveraging **Netlify Functions** for backend logic and **AWS SES** for email notifications.
-
-- **Netlify**: Handles static site hosting with CI/CD for automated deployments.  
-- **Netlify Functions**: Serverless functions process contact form submissions.  
-- **AWS SES (Simple Email Service)**: Sends email notifications when users submit the contact form.  
+| Area                 | Technologies                                        |
+| -------------------- | --------------------------------------------------- |
+| **Frontend**         | React, TypeScript, Styled Components, Framer Motion |
+| **Infrastructure**   | Docker, CloudFormation, Amazon ECS, ECR, EC2        |
+| **Email Service**    | AWS SES                                             |
+| **Routing & Domain** | Amazon Route 53                                     |
+| **CI/CD**            | AWS CodePipeline, CodeBuild                         |
+| **Containerisation** | Dockerfile (multi-service architecture)             |
 
 ---
 
-## ⚠️ Usage Notes  
+## 📌 Key Features
 
-> 🚀 **This repository is for demonstration purposes only.** It showcases the **code structure and technologies used** for my personal portfolio.  
+- **Responsive SPA** built with **React + TypeScript**, designed for desktop and mobile.
+- **Microservices Architecture** using Docker containers deployed on **Amazon ECS**.
+- **Integrated Contact Form** using **API Gateway + Lambda + AWS SES** for secure email submissions.
+- **Dynamic Routing** and **domain management** through **Amazon Route 53**.
+- **CI/CD Pipeline** triggered on GitHub commits, managed via **AWS CodePipeline** and **CloudFormation**.
+- Embedded demo project deployments hosted as separate services under a shared ECS cluster.
 
-> **Testing or local setup is not required**, as the **live demo** is provided above.  
+---
 
-If you’d like to discuss my work or request a walkthrough, **feel free to reach out!**  
+## 🛠️ Architecture & Deployment
+
+The full application is hosted on **AWS** and structured for scalability and modularity:
+
+- **Frontend** is containerised and deployed using **Docker + ECS**.
+- **Infrastructure as Code** defined using **CloudFormation nested stacks**, managing services like ECS, ECR, IAM, VPC, and ALB.
+- **Contact Form** is handled via **serverless Lambda functions**, triggered by **API Gateway** and integrated with **SES**.
+- **Domain routing and SSL** managed via **Amazon Route 53 + ACM**.
+- Additional demo apps (also containerised) are deployed as **separate ECS services** behind the same ALB.
+
+---
+
+## 🧪 Purpose
+
+This portfolio demonstrates:
+
+- Full lifecycle software development: from frontend to backend to infrastructure.
+- Real-world DevOps practices including Dockerisation, CI/CD pipelines, and secure IAM configuration.
+- Scalable, cloud-native application hosting on **AWS using production-ready patterns**.
+
+---
+
+## 📄 License & Usage
+
+This repository is part of my personal portfolio. It is intended for demonstration purposes only. Do not reuse or redistribute without permission.
