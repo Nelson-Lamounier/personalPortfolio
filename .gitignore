@@ -26,5 +26,7 @@ dist-ssr
 
 push-image-portfolio.sh
 
+DEBUG.md
+
 # Local Netlify folder
 .netlify

@@ -3,40 +3,56 @@
 version: 0.2
 
 env:
-  parameter-store:
-    GITHUB_TOKEN: "/github/token"
-    DOCKERHUB_USERNAME: "/dockerhub/username"
-    DOCKERHUB_PASSWORD: "/dockerhub/password"
+  variables:
+    AWS_REGION: "eu-west-1"
+    ECR_REPOSITORY_NAME: "portfolio-dev"
+  # Remove Docker Hub credentials since you're using ECR
+  # parameter-store:
+  #   DOCKERHUB_USERNAME: "/dockerhub/username"
+  #   DOCKERHUB_PASSWORD: "/dockerhub/password"
 
 phases:
   install:
+    runtime-versions:
+      docker: 20
     commands:
-      - echo Logging in to Docker Hub...
-      - echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
-      - export REPOSITORY_URL=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/portfolio-dev
+      - echo Setting up environment variables...
+      - export REPOSITORY_URL=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY_NAME
       - export IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - export COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION)
+      - echo "Repository URL:$REPOSITORY_URL"
+      - echo "Image Tag:$IMAGE_TAG"
+
   pre_build:
     commands:
-      - echo $GITHUB_TOKEN
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
+      - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $REPOSITORY_URL
 
   build:
     commands:
-      - echo Building Docker Image...
-      - docker build -t $REPOSITORY_URL:$IMAGE_TAG .
-      - docker tag $REPOSITORY_URL:$IMAGE_TAG $REPOSITORY_URL:latest
+      - echo Build started on `date`
+      - echo Building Docker image for ECS...
+      # Build for linux/amd64 platform (ECS compatibility)
+      - docker build --platform linux/amd64 -t $ECR_REPOSITORY_NAME:$IMAGE_TAG .
+      - docker tag $ECR_REPOSITORY_NAME:$IMAGE_TAG $REPOSITORY_URL:$IMAGE_TAG
+      - docker tag $ECR_REPOSITORY_NAME:$IMAGE_TAG $REPOSITORY_URL:latest
 
   post_build:
     commands:
-      - echo Pushing to ECR...
+      - echo Build completed on `date`
+      - echo Pushing Docker images to ECR...
       - docker push $REPOSITORY_URL:$IMAGE_TAG
       - docker push $REPOSITORY_URL:latest
-      - echo Writing imagedefinitions.json...
-      - printf '[{"name":"app-container","imageUri":"%s"}]' "$REPOSITORY_URL:$IMAGE_TAG" > imagedefinitions.json
+      - echo Writing image definitions file for ECS deployment...
+      - printf '[{"name":"portfolio-app-container","imageUri":"%s"}]' "$REPOSITORY_URL:$IMAGE_TAG" > imagedefinitions.json
+      - cat imagedefinitions.json
 
 artifacts:
   files:
     - imagedefinitions.json
   discard-paths: yes
   base-directory: .
+
+cache:
+  paths:
+    - "/root/.docker/**/*"
