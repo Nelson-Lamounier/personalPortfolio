@@ -33,9 +33,9 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building Docker image for ECS...
-      # Build the image directly with the full repository URL
+      - "# Build the image directly with the full repository URL"
       - docker build --platform linux/amd64 -t $REPOSITORY_URL:$IMAGE_TAG .
-      # Add additional tags for better versioning
+      - "# Add additional tags for better versioning"
       - docker tag $REPOSITORY_URL:$IMAGE_TAG $REPOSITORY_URL:latest
       - docker tag $REPOSITORY_URL:$IMAGE_TAG $REPOSITORY_URL:$DATE_TAG
 
@@ -43,7 +43,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing Docker images to ECR...
-      # Push all tags explicitly
+      - "# Push all tags explicitly"
       - docker push $REPOSITORY_URL:$IMAGE_TAG
       - docker push $REPOSITORY_URL:latest
       - docker push $REPOSITORY_URL:$DATE_TAG
