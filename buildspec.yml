@@ -19,10 +19,10 @@ phases:
       - export COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - export IMAGE_TAG=${COMMIT_HASH:=latest}
       - export DATE_TAG=$(date +%Y%m%d-%H%M)
-      - echo "Repository URL: $REPOSITORY_URL"
-      - echo "Commit Hash: $COMMIT_HASH"
-      - echo "Image Tag: $IMAGE_TAG"
-      - echo "Date Tag: $DATE_TAG"
+      - echo "Repository URL $REPOSITORY_URL"
+      - echo "Commit Hash $COMMIT_HASH"
+      - echo "Image Tag $IMAGE_TAG"
+      - echo "Date Tag $DATE_TAG"
 
   pre_build:
     commands:
@@ -33,9 +33,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building Docker image for ECS...
-      - "# Build the image directly with the full repository URL"
       - docker build --platform linux/amd64 -t $REPOSITORY_URL:$IMAGE_TAG .
-      - "# Add additional tags for better versioning"
       - docker tag $REPOSITORY_URL:$IMAGE_TAG $REPOSITORY_URL:latest
       - docker tag $REPOSITORY_URL:$IMAGE_TAG $REPOSITORY_URL:$DATE_TAG
 
@@ -43,7 +41,6 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing Docker images to ECR...
-      - "# Push all tags explicitly"
       - docker push $REPOSITORY_URL:$IMAGE_TAG
       - docker push $REPOSITORY_URL:latest
       - docker push $REPOSITORY_URL:$DATE_TAG
