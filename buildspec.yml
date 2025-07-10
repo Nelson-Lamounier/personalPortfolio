@@ -7,7 +7,7 @@ env:
     AWS_REGION: "eu-west-1"
     ECR_REPOSITORY_NAME: "portfolio-dev"
   parameter-store:
-    AWS_ACCOUNT_ID: "/codebuild/aws-account-id"
+    AWS_ACCOUNT_ID: "/myapp/aws-account-id"
 
 phases:
   install:
@@ -15,14 +15,14 @@ phases:
       docker: 20
     commands:
       - echo Setting up environment variables...
-      - export REPOSITORY_URL=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY_NAME
-      - export COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
-      - export IMAGE_TAG=${COMMIT_HASH:=latest}
-      - export DATE_TAG=$(date +%Y%m%d-%H%M)
-      - echo "Repository URL $REPOSITORY_URL"
-      - echo "Commit Hash $COMMIT_HASH"
-      - echo "Image Tag $IMAGE_TAG"
-      - echo "Date Tag $DATE_TAG"
+      - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY_NAME
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - DATE_TAG=$(date +%Y%m%d-%H%M)
+      - echo Repository URL $REPOSITORY_URI
+      - echo Commit Hash $COMMIT_HASH
+      - echo Image Tag $IMAGE_TAG
+      - echo Date Tag $DATE_TAG
 
   pre_build:
     commands:
@@ -33,19 +33,19 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building Docker image for ECS...
-      - docker build --platform linux/amd64 -t $REPOSITORY_URL:$IMAGE_TAG .
-      - docker tag $REPOSITORY_URL:$IMAGE_TAG $REPOSITORY_URL:latest
-      - docker tag $REPOSITORY_URL:$IMAGE_TAG $REPOSITORY_URL:$DATE_TAG
+      - docker build --platform linux/amd64 -t $REPOSITORY_URI:$IMAGE_TAG .
+      - docker tag $REPOSITORY_URI:$IMAGE_TAG $REPOSITORY_URI:latest
+      - docker tag $REPOSITORY_URI:$IMAGE_TAG $REPOSITORY_URI:$DATE_TAG
 
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing Docker images to ECR...
-      - docker push $REPOSITORY_URL:$IMAGE_TAG
-      - docker push $REPOSITORY_URL:latest
-      - docker push $REPOSITORY_URL:$DATE_TAG
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:$DATE_TAG
       - echo Writing image definitions file for ECS deployment...
-      - printf '[{"name":"portfolio-app-container","imageUri":"%s"}]' "$REPOSITORY_URL:$IMAGE_TAG" > imagedefinitions.json
+      - printf '[{"name":"portfolio-app-container","imageUri":"%s"}]' "$REPOSITORY_URI:$IMAGE_TAG" > imagedefinitions.json
       - cat imagedefinitions.json
 
 artifacts:
